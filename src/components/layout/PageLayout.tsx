@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Navigation from './Navigation';
+import Footer from './Footer';
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -17,13 +18,12 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   className = ''
 }) => {
   return (
-    <div className={`min-h-screen text-white relative overflow-hidden ${backgroundColor} ${className}`}>
+    <div className={`min-h-screen text-white relative overflow-hidden flex flex-col ${backgroundColor} ${className}`}>
       {showNavigation && <Navigation />}
-      
-      {/* Add padding-top to account for fixed navigation */}
-      <div className={showNavigation ? 'pt-20' : ''}>
+      <div className="flex-1 flex flex-col">
         {children}
       </div>
+      <Footer />
     </div>
   );
 };

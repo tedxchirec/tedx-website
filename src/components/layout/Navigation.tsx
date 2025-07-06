@@ -25,7 +25,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Speakers', href: '/speakers' },
     { label: 'Schedule', href: '/schedule' },
     { label: 'Tickets', href: '/tickets' },
   ];
@@ -33,9 +32,18 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down ${
       isScrolled 
-        ? 'bg-black/95 backdrop-blur-md shadow-lg py-3' 
-        : 'bg-transparent py-6'
-    } ${className}`}>
+        ? 'bg-black/70 backdrop-blur-xl shadow-lg py-3 border-b border-white/10 glass-navbar' 
+        : 'bg-black/30 backdrop-blur-lg py-6 glass-navbar'
+    } ${className}`}
+      style={{
+        WebkitBackdropFilter: 'blur(18px)',
+        backdropFilter: 'blur(18px)',
+        background: isScrolled ? 'rgba(20,20,20,0.7)' : 'rgba(20,20,20,0.3)',
+        borderBottom: isScrolled ? '1px solid rgba(255,255,255,0.10)' : '1px solid transparent',
+        boxShadow: isScrolled ? undefined : 'none',
+        transition: 'background 0.3s, border-bottom 0.3s, padding 0.3s'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -93,7 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
 
         {/* Mobile Menu */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}>
           <div className="bg-black/90 backdrop-blur-md rounded-2xl p-6 space-y-4">
             {navItems.map((item) => (
