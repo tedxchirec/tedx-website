@@ -25,7 +25,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Meet The Team", href: "/meet-the-team" },
-    { label: "Speakers", href: "/speakers" },
     { label: "Schedule", href: "/schedule" },
   ];
 

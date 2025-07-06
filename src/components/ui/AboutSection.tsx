@@ -70,7 +70,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       ),
       icon: (
         <svg
-          className="w-8 h-8 text-[#F5D6C6] mx-auto"
+          className="w-7 h-7 text-[#F5D6C6] mx-auto"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -153,13 +153,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-200 group-hover:text-red-400">
                 {stat.number}
               </div>
-              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.5em] flex items-center justify-center">
+              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.5em] flex items-center justify-center transition-colors duration-200 group-hover:text-gray-200">
                 {stat.title}
               </div>
-              <div className="flex justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="flex justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-200">
                 {stat.icon}
               </div>
             </div>

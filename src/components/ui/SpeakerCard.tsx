@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 
 interface SpeakerCardProps {
@@ -16,22 +18,38 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
   description,
   descriptionClassName,
 }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+  const handleToggle = () => {
+    if (isMobile) setShowOverlay((v) => !v);
+  };
+
   return (
     <div
       className="relative rounded-2xl overflow-hidden group shadow-lg border border-red-500 bg-gray-900"
-      style={{ height, width }}
+      style={{ height, width, aspectRatio: '4/5' }}
+      onClick={handleToggle}
     >
       <Image
         src={image}
         alt={description}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 1, objectFit: 'cover', objectPosition: 'top center', aspectRatio: '4/5' }}
         sizes="(max-width: 768px) 100vw, 400px"
         priority
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+      <div
+        className={`absolute inset-0 bg-black/60 flex items-center justify-center z-10 transition-opacity duration-300 ${
+          isMobile
+            ? showOverlay
+              ? 'opacity-100'
+              : 'opacity-0'
+            : 'opacity-0 group-hover:opacity-100'
+        }`}
+      >
         <span
           className={`text-white text-center ${
             descriptionClassName ||

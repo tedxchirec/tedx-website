@@ -39,25 +39,25 @@ const Footer: React.FC = () => {
           <div className="font-semibold mb-2">Quick Links</div>
           <ul className="space-y-1 text-gray-300 text-sm">
             <li>
-              <Link href="/about" className="hover:text-white transition">
-                About
+              <Link href="/" className="hover:text-white transition">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/meet-the-team" className="hover:text-white transition">
+                Meet The Team
               </Link>
             </li>
             <li>
               <Link href="/schedule" className="hover:text-white transition">
-                Schedule
-              </Link>
-            </li>
-            <li>
-              <Link href="/tickets" className="hover:text-white transition">
-                Tickets
+                schedule
               </Link>
             </li>
           </ul>
         </div>
-        {/* Contact */}
+        {/* Details */}
         <div className="flex-1 min-w-[200px]">
-          <div className="font-semibold mb-2">Contact</div>
+          <div className="font-semibold mb-2">Details</div>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li className="flex items-center gap-2">
               <span className="text-red-500">
@@ -73,7 +73,9 @@ const Footer: React.FC = () => {
                   <circle cx="12" cy="11" r="2.5" fill="currentColor" />
                 </svg>
               </span>
+              <a href="https://www.google.com/maps/dir//CHIREC+International+School+-+IBDP+%26+Cambridge+Campus+F8HM%2B4V5+Spring+Valley+Serilingampalle+(M),+Hyderabad,+Telangana+500133/@17.4777625,78.3347344,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3bcb939445dac8ed:0x8cbe499e963067c5" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
               ISRP Campus
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-red-500">

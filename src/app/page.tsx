@@ -6,7 +6,6 @@ import HeroSection from "@/components/ui/HeroSection";
 import AboutSection from "@/components/ui/AboutSection";
 
 import SpeakersSection from "@/components/speakers/SpeakersSection";
-import ScheduleSection from "@/components/ui/ScheduleSection";
 
 export default function HomePage() {
   const handleBookNowClick = () => {
@@ -32,9 +31,6 @@ export default function HomePage() {
 
       {/* About Section */}
       <AboutSection />
-
-      {/* Schedule Section */}
-      <ScheduleSection />
 
       {/* Speakers Section */}
       <SpeakersSection />
