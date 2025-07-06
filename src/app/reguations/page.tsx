@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
