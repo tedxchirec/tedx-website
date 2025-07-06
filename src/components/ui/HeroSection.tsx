@@ -28,7 +28,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <div className={`relative z-10 flex flex-col items-center justify-center h-full px-6 text-center ${className}`}>
-      <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 tracking-[0.05em] text-glow font-sans">
+      <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 tracking-[0.05em] text-glow font-sans text-white">
         {title}
       </h1>
       
