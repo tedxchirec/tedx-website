@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FourOFourPage() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center bg-black overflow-hidden">
-      <h1 className="text-[5rem] md:text-[8rem] font-extrabold text-white drop-shadow-lg mb-2 leading-none relative z-10 animate-glow text-glow">404
+      <h1 className="text-[5rem] md:text-[8rem] font-extrabold text-red-300 drop-shadow-lg mb-2 leading-none relative z-10 animate-glow text-glow">404
         {/* Aura/Holo effect */}
         <span className="absolute inset-0 pointer-events-none -z-10">
           <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/30 via-red-400/10 to-white/0 blur-2xl animate-glow" />

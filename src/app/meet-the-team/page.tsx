@@ -1,9 +1,12 @@
-import React from "react";
-import teamData from "@/lib/teamData";
-import SpeakerCard from "@/components/ui/SpeakerCard";
+"use client";
 
-const departments = Array.from(
-  new Set(teamData.sort((a, b) => a.DeptOrder - b.DeptOrder).map((m) => m.Department))
+import React from "react";
+import { teamData, TeamMember } from "@/lib/teamData";
+import SpeakerCard from "@/components/ui/SpeakerCard";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+
+const departments: string[] = Array.from(
+  new Set(teamData.sort((a: TeamMember, b: TeamMember) => a.DeptOrder - b.DeptOrder).map((m: TeamMember) => m.Department))
 );
 
 export default function MeetTheTeamPage() {
@@ -33,10 +36,10 @@ export default function MeetTheTeamPage() {
         Meet the <span className="text-red-500">TEDx</span>Youth@CHIREC Team
       </h1>
       <div className="w-full flex flex-col gap-20 pb-16 md:pb-24">
-        {departments.map((dept) => {
-          const members = teamData.filter((m) => m.Department === dept);
+        {departments.map((dept: string, idx: number) => {
+          const members = teamData.filter((m: TeamMember) => m.Department === dept);
           return (
-            <section key={dept} className="relative w-full">
+            <AnimatedSection key={dept} className="relative w-full" delay={0.1 * idx}>
               <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 text-red-500">{dept}</h2>
               <div
                 className="flex flex-wrap md:flex-nowrap justify-center items-center gap-8 md:gap-12 w-full px-2 md:px-8"
@@ -44,7 +47,7 @@ export default function MeetTheTeamPage() {
                   rowGap: '3rem',
                 }}
               >
-                {members.map((member) => {
+                {members.map((member: TeamMember) => {
                   // Responsive: keep 4:5 aspect ratio, scale to screen width on mobile
                   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
                   const width = isMobile ? Math.min(window.innerWidth * 0.9, 340) : 425;
@@ -61,7 +64,7 @@ export default function MeetTheTeamPage() {
                   );
                 })}
               </div>
-            </section>
+            </AnimatedSection>
           );
         })}
       </div>

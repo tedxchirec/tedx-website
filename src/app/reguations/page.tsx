@@ -1,8 +1,9 @@
 import React from "react";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function RegulationsPage() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden px-4 py-20 md:py-32">
+    <AnimatedSection className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden px-4 py-20 md:py-32">
       {/* Abstract background elements */}
       <div className="absolute inset-0 pointer-events-none -z-10">
         <div className="absolute left-1/4 top-0 w-40 h-40 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "0.5s" }} />
@@ -51,6 +52,6 @@ export default function RegulationsPage() {
           </p>
         </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 interface AboutSectionProps {
   className?: string;
@@ -109,7 +110,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
   ];
 
   return (
-    <section
+    <AnimatedSection
       className={`flex items-center justify-center px-4 md:px-12 relative ${className}`}
       style={{ minHeight: "100vh" }}
     >
@@ -216,7 +217,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
           Book Now
         </button>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 

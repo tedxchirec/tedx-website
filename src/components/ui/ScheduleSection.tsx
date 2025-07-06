@@ -41,9 +41,11 @@ const typeColors: Record<string, string> = {
   break: "bg-yellow-700/70 text-yellow-100",
 };
 
+import AnimatedSection from "./AnimatedSection";
+
 const ScheduleSection: React.FC = () => {
   return (
-    <section className="relative py-20 md:py-32 px-4 md:px-0 min-h-[80vh] flex flex-col items-center justify-center overflow-hidden">
+    <AnimatedSection className="relative py-20 md:py-32 px-4 md:px-0 min-h-[80vh] flex flex-col items-center justify-center overflow-hidden">
       {/* Abstract background elements */}
       <div className="absolute inset-0 pointer-events-none -z-10">
         <div
@@ -207,7 +209,7 @@ const ScheduleSection: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 

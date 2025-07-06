@@ -4,7 +4,7 @@ import React from "react";
 import AnimatedBackground from "@/components/ui/AnimatedBackground";
 import HeroSection from "@/components/ui/HeroSection";
 import AboutSection from "@/components/ui/AboutSection";
-
+import AnimatedSection from "@/components/ui/AnimatedSection";
 import SpeakersSection from "@/components/speakers/SpeakersSection";
 
 export default function HomePage() {
@@ -15,8 +15,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section with its own background */}
-      <div className="relative h-screen">
+      {/* Hero Section with its own background and animation */}
+      <AnimatedSection className="relative h-screen">
         {/* Animated Background */}
         <AnimatedBackground />
 
@@ -27,7 +27,7 @@ export default function HomePage() {
           ctaText="Book Now"
           onCtaClick={handleBookNowClick}
         />
-      </div>
+      </AnimatedSection>
 
       {/* About Section */}
       <AboutSection />

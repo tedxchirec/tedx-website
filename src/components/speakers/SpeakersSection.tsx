@@ -1,5 +1,6 @@
 import React from "react";
 import SpeakerCard from "../ui/SpeakerCard";
+import AnimatedSection from "../ui/AnimatedSection";
 
 const guestSpeakers = [
   {
@@ -38,7 +39,7 @@ const studentSpeakers = [
 ];
 
 const SpeakersSection: React.FC = () => (
-  <section className="relative z-10 py-24 px-6 md:px-12 bg-black/90">
+  <AnimatedSection className="relative z-10 py-24 px-6 md:px-12 bg-black/90">
     {/* Unique background for guest speakers */}
     <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
     <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
@@ -81,7 +82,7 @@ const SpeakersSection: React.FC = () => (
     </div>
     <style jsx>{`
       @media (max-width: 768px) {
-        section {
+        section, .animated-section {
           padding-top: 2rem;
           padding-bottom: 2rem;
         }
@@ -95,7 +96,7 @@ const SpeakersSection: React.FC = () => (
         }
       }
     `}</style>
-  </section>
+  </AnimatedSection>
 );
 
 export default SpeakersSection;
