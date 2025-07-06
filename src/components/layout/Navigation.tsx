@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavigationProps {
   className?: string;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
+const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -18,30 +18,33 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Schedule', href: '/schedule' },
-    { label: 'Tickets', href: '/tickets' },
+    { label: "Home", href: "/" },
+    { label: "Meet The Team", href: "/meet-the-team" },
+    { label: "Speakers", href: "/speakers" },
+    { label: "Schedule", href: "/schedule" },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down ${
-      isScrolled 
-        ? 'bg-black/70 backdrop-blur-xl shadow-lg py-3 border-b border-white/10 glass-navbar' 
-        : 'bg-black/30 backdrop-blur-lg py-6 glass-navbar'
-    } ${className}`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-slide-down ${
+        isScrolled
+          ? "bg-black/70 backdrop-blur-xl shadow-lg py-3 border-b border-white/10 glass-navbar"
+          : "bg-black/30 backdrop-blur-lg py-6 glass-navbar"
+      } ${className}`}
       style={{
-        WebkitBackdropFilter: 'blur(18px)',
-        backdropFilter: 'blur(18px)',
-        background: isScrolled ? 'rgba(20,20,20,0.7)' : 'rgba(20,20,20,0.3)',
-        borderBottom: isScrolled ? '1px solid rgba(255,255,255,0.10)' : '1px solid transparent',
-        boxShadow: isScrolled ? undefined : 'none',
-        transition: 'background 0.3s, border-bottom 0.3s, padding 0.3s'
+        WebkitBackdropFilter: "blur(18px)",
+        backdropFilter: "blur(18px)",
+        background: isScrolled ? "rgba(20,20,20,0.7)" : "rgba(20,20,20,0.3)",
+        borderBottom: isScrolled
+          ? "1px solid rgba(255,255,255,0.10)"
+          : "1px solid transparent",
+        boxShadow: isScrolled ? undefined : "none",
+        transition: "background 0.3s, border-bottom 0.3s, padding 0.3s",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -49,11 +52,15 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <span className="text-2xl md:text-3xl font-bold transition-all duration-300 group-hover:scale-105">
-              <span className="text-red-500 group-hover:text-red-400 transition-colors">TEDx</span>
-              <span className="text-white group-hover:text-gray-200 transition-colors">Chirec</span>
+              <span className="text-red-500 group-hover:text-red-400 transition-colors">
+                TEDx<br></br>
+              </span>
+              <span className="text-white group-hover:text-gray-200 transition-colors">
+                Youth@CHIREC
+              </span>
             </span>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
@@ -62,8 +69,8 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
                 href={item.href}
                 className={`relative px-4 py-2 rounded-full transition-all duration-300 nav-hover ${
                   pathname === item.href
-                    ? 'text-red-500 bg-red-500/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    ? "text-red-500 bg-red-500/10"
+                    : "text-gray-300 hover:text-white hover:bg-white/5"
                 }`}
               >
                 {item.label}
@@ -73,7 +80,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
               </Link>
             ))}
           </div>
-          
+
           {/* CTA Button */}
           <div className="hidden md:block">
             <button className="group relative overflow-hidden bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
@@ -87,22 +94,32 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 transition-all duration-300"
           >
-            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
-            }`}></span>
-            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMobileMenuOpen ? 'opacity-0' : ''
-            }`}></span>
-            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
-            }`}></span>
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            ></span>
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            ></span>
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
-        }`}>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isMobileMenuOpen
+              ? "max-h-[500px] opacity-100 mt-4"
+              : "max-h-0 opacity-0"
+          }`}
+        >
           <div className="bg-black/90 backdrop-blur-md rounded-2xl p-6 space-y-4">
             {navItems.map((item) => (
               <Link
@@ -111,8 +128,8 @@ const Navigation: React.FC<NavigationProps> = ({ className = '' }) => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block py-3 px-4 rounded-xl transition-all duration-300 ${
                   pathname === item.href
-                    ? 'text-red-500 bg-red-500/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    ? "text-red-500 bg-red-500/10"
+                    : "text-gray-300 hover:text-white hover:bg-white/5"
                 }`}
               >
                 {item.label}

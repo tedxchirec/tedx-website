@@ -1,6 +1,6 @@
 # Project Structure Documentation
 
-This document outlines the organization and structure of the TEDxChirec website codebase.
+This document outlines the organization and structure of the TEDxYouth@CHIREC website codebase.
 
 ## 🏗️ Overall Architecture
 
@@ -39,54 +39,63 @@ tedx-website/
 ## 📁 Directory Breakdown
 
 ### `/src/app` - Next.js Pages
+
 - **Purpose**: Contains all route-based pages using Next.js App Router
 - **Structure**: Each directory represents a route, each contains page-specific logic
 - **Guidelines**: Keep page logic in the page files, use components for reusable elements
 
 ### `/src/components` - Reusable React Components
+
 - **Purpose**: Only truly reusable components that can be shared across pages
 - **Organization**:
   - `layout/`: Navigation, footers, page wrappers - elements that appear on multiple pages
   - `ui/`: Generic, reusable UI elements (buttons, hero sections, cards, modals)
-- **Guidelines**: 
+- **Guidelines**:
   - Components must be reusable across multiple pages
   - One component per file
   - Use TypeScript interfaces
   - Accept `className` prop for styling flexibility
 
 ### `/src/lib` - Utilities and Configuration
+
 - **Purpose**: Helper functions, constants, and shared logic
 - **Files**:
   - `constants.ts`: Site configuration, navigation items, colors
   - `utils.ts`: Helper functions (formatting, DOM manipulation, etc.)
 
 ### `/src/styles` - Styling
+
 - **Purpose**: CSS files and styling utilities
 - **Files**:
   - `animations.css`: Custom CSS animations and keyframes
 
 ### `/src/types` - TypeScript Definitions
+
 - **Purpose**: Shared TypeScript interfaces and types
 - **Usage**: Import types across components for consistency
 
 ## 🎯 Key Benefits of This Structure
 
 ### 1. **Scalability**
+
 - Easy to add new pages by creating new directories in `/app`
 - Component organization by feature prevents bloated directories
 - Clear separation allows multiple developers to work simultaneously
 
 ### 2. **Maintainability**
+
 - Components are modular and reusable
 - Consistent typing with TypeScript
 - Clear naming conventions and organization
 
 ### 3. **Developer Experience**
+
 - Barrel exports (`index.ts`) for clean imports
 - Consistent component structure and props
 - Easy to locate and modify specific features
 
 ### 4. **Collaboration**
+
 - Each page/feature can be worked on independently
 - Component isolation reduces merge conflicts
 - Clear documentation and structure for new team members
@@ -94,6 +103,7 @@ tedx-website/
 ## 🔧 Development Guidelines
 
 ### Adding New Pages
+
 1. Create directory in `/src/app/[page-name]/`
 2. Add `page.tsx` with the page component and page-specific logic
 3. Use existing reusable components from `/src/components/`
@@ -101,6 +111,7 @@ tedx-website/
 5. Update navigation in `constants.ts` if needed
 
 ### Creating Components
+
 1. Only create components that will be reused across multiple pages
 2. Use TypeScript with proper interfaces
 3. Include `className` prop for styling flexibility
@@ -108,11 +119,13 @@ tedx-website/
 5. Export from appropriate `index.ts` file
 
 ### Styling
+
 1. Use Tailwind CSS classes for styling
 2. Custom animations go in `/src/styles/animations.css`
 3. Constants for colors/spacing in `/src/lib/constants.ts`
 
 ### State Management
+
 - Start with React's built-in state (useState, useContext)
 - Add Zustand or Redux Toolkit when global state is needed
 - Keep component-specific state local
@@ -120,6 +133,7 @@ tedx-website/
 ## 🚀 Future Enhancements
 
 ### Planned Additions
+
 - **Components**: Speaker cards, schedule timeline, ticket purchase flow
 - **Features**: Contact forms, newsletter signup, social media integration
 - **Tooling**: Storybook for component documentation
@@ -127,6 +141,7 @@ tedx-website/
 - **Performance**: Image optimization and lazy loading
 
 ### Recommended Structure Expansions
+
 ```
 src/
 ├── components/
@@ -146,20 +161,20 @@ src/
 
 ```typescript
 // src/components/speakers/SpeakerCard.tsx
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import type { Speaker } from '@/types';
+import React from "react";
+import Image from "next/image";
+import type { Speaker } from "@/types";
 
 interface SpeakerCardProps {
   speaker: Speaker;
   className?: string;
 }
 
-const SpeakerCard: React.FC<SpeakerCardProps> = ({ 
-  speaker, 
-  className = '' 
+const SpeakerCard: React.FC<SpeakerCardProps> = ({
+  speaker,
+  className = "",
 }) => {
   return (
     <div className={`bg-gray-900 rounded-lg p-6 ${className}`}>

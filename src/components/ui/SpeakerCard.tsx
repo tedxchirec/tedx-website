@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface SpeakerCardProps {
   height: number | string;
@@ -9,7 +9,13 @@ interface SpeakerCardProps {
   descriptionClassName?: string;
 }
 
-const SpeakerCard: React.FC<SpeakerCardProps> = ({ height, width, image, description, descriptionClassName }) => {
+const SpeakerCard: React.FC<SpeakerCardProps> = ({
+  height,
+  width,
+  image,
+  description,
+  descriptionClassName,
+}) => {
   return (
     <div
       className="relative rounded-2xl overflow-hidden group shadow-lg border border-red-500 bg-gray-900"
@@ -26,7 +32,12 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ height, width, image, descrip
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-        <span className={`text-white text-center ${descriptionClassName || 'text-base md:text-lg font-medium md:font-semibold leading-snug md:leading-normal px-4'} drop-shadow-lg`}>
+        <span
+          className={`text-white text-center ${
+            descriptionClassName ||
+            "text-base md:text-lg font-medium md:font-semibold leading-snug md:leading-normal px-4"
+          } drop-shadow-lg`}
+        >
           {description}
         </span>
       </div>
