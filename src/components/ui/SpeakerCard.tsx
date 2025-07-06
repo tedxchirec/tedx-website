@@ -27,9 +27,10 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
 
   return (
     <div
-      className="relative rounded-2xl overflow-hidden group shadow-lg border border-red-500 bg-gray-900"
+      className="relative rounded-2xl overflow-hidden group shadow-lg border border-red-500 bg-gray-900 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus-within:scale-105 focus-within:shadow-2xl"
       style={{ height, width, aspectRatio: '4/5' }}
       onClick={handleToggle}
+      tabIndex={0}
     >
       <Image
         src={image}

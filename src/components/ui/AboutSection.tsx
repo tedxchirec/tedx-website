@@ -137,7 +137,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
         {/* Header */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">
-          About <span className="text-red-500">TEDx</span>CHIREC
+          About <span className="text-red-500">TEDx</span>Youth@CHIREC
         </h2>
 
         {/* Description */}
@@ -152,14 +152,18 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         {/* Stats in a row for the new format */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-200 group-hover:text-red-400">
+            <div
+              key={index}
+              className="text-center group cursor-pointer select-none transition-all duration-300 rounded-xl hover:bg-[#18181c] hover:shadow-xl hover:scale-105 focus-within:scale-105 focus-within:shadow-xl"
+              tabIndex={0}
+            >
+              <div className="text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-300 group-hover:text-red-400 group-focus-within:text-red-400">
                 {stat.number}
               </div>
-              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.5em] flex items-center justify-center transition-colors duration-200 group-hover:text-gray-200">
+              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.5em] flex items-center justify-center transition-colors duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200">
                 {stat.title}
               </div>
-              <div className="flex justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-200">
+              <div className="flex justify-center opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
                 {stat.icon}
               </div>
             </div>
@@ -209,7 +213,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
             paddingBottom: "0.75rem",
           }}
         >
-          Join Our Community
+          Book Now
         </button>
       </div>
     </section>

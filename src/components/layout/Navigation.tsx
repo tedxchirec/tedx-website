@@ -66,11 +66,11 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-4 py-2 rounded-full transition-all duration-300 nav-hover ${
-                  pathname === item.href
-                    ? "text-red-500 bg-red-500/10"
-                    : "text-gray-300 hover:text-white hover:bg-white/5"
-                }`}
+                className={`relative px-4 py-2 rounded-full transition-all duration-300 nav-hover
+                  ${pathname === item.href
+                    ? "text-red-500 bg-red-500/10 shadow shadow-red-500/10 hover:bg-red-500/20 hover:shadow-red-500/20"
+                    : "text-gray-300 hover:text-white hover:bg-white/5"}
+                `}
               >
                 {item.label}
                 {pathname === item.href && (
@@ -83,7 +83,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <button className="group relative overflow-hidden bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
-              <span className="relative z-10">Register</span>
+              <span className="relative z-10">Book Now</span>
               <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </div>

@@ -87,7 +87,7 @@ const ScheduleSection: React.FC = () => {
                   }`}
                 >
                   {isLeft && (
-                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2">
+                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
                           {item.time}
@@ -101,7 +101,7 @@ const ScheduleSection: React.FC = () => {
                           {item.type}
                         </span>
                       </div>
-                      <div className="text-lg md:text-2xl font-bold text-white leading-tight">
+                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-400 transition-colors duration-300">
                         {item.title}
                       </div>
                       {item.subtitle && (
@@ -109,7 +109,7 @@ const ScheduleSection: React.FC = () => {
                           {item.subtitle}
                         </div>
                       )}
-                      <div className="text-sm md:text-base text-gray-300">
+                      <div className="text-sm md:text-base text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
                         {item.description}
                       </div>
                     </div>
@@ -133,7 +133,7 @@ const ScheduleSection: React.FC = () => {
                   }`}
                 >
                   {!isLeft && (
-                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2">
+                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
                           {item.time}
@@ -147,7 +147,7 @@ const ScheduleSection: React.FC = () => {
                           {item.type}
                         </span>
                       </div>
-                      <div className="text-lg md:text-2xl font-bold text-white leading-tight">
+                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-400 transition-colors duration-300">
                         {item.title}
                       </div>
                       {item.subtitle && (
@@ -155,7 +155,7 @@ const ScheduleSection: React.FC = () => {
                           {item.subtitle}
                         </div>
                       )}
-                      <div className="text-sm md:text-base text-gray-300">
+                      <div className="text-sm md:text-base text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
                         {item.description}
                       </div>
                     </div>
@@ -174,7 +174,7 @@ const ScheduleSection: React.FC = () => {
               {/* Dot */}
               <span className="w-3 h-3 rounded-full bg-red-500 border-2 border-black z-10 mr-4 ml-2" />
               {/* Card */}
-              <div className="w-full max-w-md mx-auto bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 flex flex-col gap-2">
+              <div className="w-full max-w-md mx-auto bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 flex flex-col gap-2 transition-all duration-300 active:scale-[0.98] hover:scale-[1.015] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-lg font-bold text-red-500 mr-2 min-w-[60px]">
                     {item.time}
@@ -187,7 +187,7 @@ const ScheduleSection: React.FC = () => {
                     {item.type}
                   </span>
                 </div>
-                <div className="text-lg font-bold text-white leading-tight">
+                <div className="text-lg font-bold text-white leading-tight group-hover/card:text-red-400 transition-colors duration-300">
                   {item.title}
                 </div>
                 {item.subtitle && (
@@ -195,7 +195,7 @@ const ScheduleSection: React.FC = () => {
                     {item.subtitle}
                   </div>
                 )}
-                <div className="text-sm text-gray-300">{item.description}</div>
+                <div className="text-sm text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">{item.description}</div>
               </div>
             </div>
           ))}

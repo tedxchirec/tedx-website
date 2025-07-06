@@ -23,11 +23,11 @@ const Footer: React.FC = () => {
           style={{ animationDelay: "2.5s" }}
         ></div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-20 text-center md:text-left">
         {/* Logo and description */}
-        <div className="flex-1 min-w-[220px] mb-8 md:mb-0">
+        <div className="flex-1 min-w-[220px] mb-8 md:mb-0 flex flex-col items-center md:items-start">
           <div className="text-2xl font-bold mb-2">
-            <span className="text-red-500">TEDx</span>CHIREC
+            <span className="text-red-500">TEDx</span>Youth@CHIREC
           </div>
           <div className="text-gray-300 text-sm leading-relaxed">
             Independently organized TED event.<br></br> © 2025 TEDxYouth@CHIREC,
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         {/* Quick Links */}
-        <div className="flex-1 min-w-[160px] mb-8 md:mb-0">
+        <div className="flex-1 min-w-[160px] mb-8 md:mb-0 flex flex-col items-center md:items-start">
           <div className="font-semibold mb-2">Quick Links</div>
           <ul className="space-y-1 text-gray-300 text-sm">
             <li>
@@ -50,13 +50,18 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link href="/schedule" className="hover:text-white transition">
-                schedule
+                Schedule
+              </Link>
+            </li>
+            <li>
+              <Link href="/reguations" className="hover:text-white transition">
+                Regulations
               </Link>
             </li>
           </ul>
         </div>
         {/* Details */}
-        <div className="flex-1 min-w-[200px]">
+        <div className="flex-1 min-w-[200px] flex flex-col items-center md:items-start">
           <div className="font-semibold mb-2">Details</div>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li className="flex items-center gap-2">
