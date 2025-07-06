@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <span className="text-red-500">TEDx</span>Chirec
           </div>
           <div className="text-gray-300 text-sm leading-relaxed">
-            Independently organized TED event.<br></br> © 2024 TEDxChirec, under license from TED.
+            Independently organized TED event.<br></br> © 2025 TEDxChirec, under license from TED.
           </div>
         </div>
         {/* Quick Links */}
