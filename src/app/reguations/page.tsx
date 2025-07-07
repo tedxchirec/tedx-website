@@ -8,10 +8,14 @@ export default function RegulationsPage() {
     <AnimatedSection className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden px-4 py-20 md:py-32">
       {/* Abstract background elements */}
       <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute left-1/4 top-0 w-40 h-40 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "0.5s" }} />
-        <div className="absolute right-10 top-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1.2s" }} />
-        <div className="absolute left-8 bottom-0 w-28 h-28 bg-red-400/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "2s" }} />
-        <div className="absolute right-1/4 bottom-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "2.5s" }} />
+        {/* Centered and mobile-friendly shapes */}
+        <div className="absolute left-1/2 top-8 w-32 h-32 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '0.3s', transform: 'translateX(-50%)' }} />
+        <div className="absolute left-1/2 bottom-8 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.1s', transform: 'translateX(-50%)' }} />
+        {/* Existing shapes, now with responsive tweaks */}
+        <div className="hidden md:block absolute left-1/4 top-0 w-40 h-40 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "0.5s" }} />
+        <div className="hidden md:block absolute right-10 top-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1.2s" }} />
+        <div className="hidden md:block absolute left-8 bottom-0 w-28 h-28 bg-red-400/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "2s" }} />
+        <div className="hidden md:block absolute right-1/4 bottom-0 w-32 h-32 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "2.5s" }} />
       </div>
       <div className="w-full max-w-3xl mx-auto text-center relative z-10">
         <h1 className="text-3xl md:text-5xl font-bold text-red-500 mb-8 drop-shadow-lg">Attendee Rules and Regulations</h1>

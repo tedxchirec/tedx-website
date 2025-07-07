@@ -7,37 +7,69 @@ interface ScheduleItem {
   title: string;
   subtitle?: string;
   description: string;
-  type: "talk" | "networking" | "break" | string;
+  type: "talk" | "info" | "break" | "ceremony" | "registration" | string;
 }
 
 const schedule: ScheduleItem[] = [
   {
-    time: "09:00",
-    title: "Arrival & Neural Networking",
-    description: "Connect with fellow attendees over augmented reality coffee.",
-    type: "networking",
-  },
-  {
-    time: "10:00",
-    title: "Opening Ceremony: The Spark",
-    subtitle: "by Event Curators",
+    time: "15:00",
+    title: "Registration Opens",
     description:
-      "An immersive audio-visual experience to ignite your curiosity.",
+      "Check in at the registration desk. All attendees must verify their details.",
+    type: "registration",
+  },
+  {
+    time: "15:45",
+    title: "Campus Entry Deadline",
+    description:
+      "All attendees must be present on campus by this time. Latecomers will not be allowed inside during talks.",
+    type: "info",
+  },
+  {
+    time: "16:00",
+    title: "Opening Ceremony",
+    description: "Welcome address and event introduction.",
+    type: "ceremony",
+  },
+  {
+    time: "16:15",
+    title: "Session 1: Speaker Talks",
+    description: "First set of TEDx talks and performances.",
     type: "talk",
   },
   {
-    time: "10:30",
-    title: "The Illusion of Time",
-    subtitle: "by Dr. Evelyn Reed",
-    description: "Exploring the fluid nature of our most rigid construct.",
+    time: "17:15",
+    title: "Break & Networking",
+    description:
+      "Snacks, tea, and coffee served outside the CMPH. Phones may be used during this time.",
+    type: "break",
+  },
+  {
+    time: "17:45",
+    title: "Session 2: Speaker Talks",
+    description: "Second set of TEDx talks and performances.",
     type: "talk",
   },
-  // Add more items as needed
+  {
+    time: "18:45",
+    title: "Closing Ceremony",
+    description: "Thank you note, acknowledgements, and event wrap-up.",
+    type: "ceremony",
+  },
+  {
+    time: "19:00",
+    title: "Event Ends",
+    description:
+      "Attendees depart. Please ensure you have all your belongings.",
+    type: "info",
+  },
 ];
 
 const typeColors: Record<string, string> = {
+  registration: "bg-blue-900/70 text-blue-200",
+  info: "bg-gray-800/70 text-gray-200",
+  ceremony: "bg-purple-900/70 text-purple-200",
   talk: "bg-red-900/70 text-red-200",
-  networking: "bg-gray-700/70 text-gray-200",
   break: "bg-yellow-700/70 text-yellow-100",
 };
 
@@ -197,7 +229,9 @@ const ScheduleSection: React.FC = () => {
                     {item.subtitle}
                   </div>
                 )}
-                <div className="text-sm text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">{item.description}</div>
+                <div className="text-sm text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
+                  {item.description}
+                </div>
               </div>
             </div>
           ))}
