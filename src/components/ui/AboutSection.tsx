@@ -71,7 +71,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       ),
       icon: (
         <svg
-          className="w-7 h-7 text-[#F5D6C6] mx-auto"
+          className="w-8 h-8 text-[#F5D6C6] mx-auto"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -155,16 +155,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center group cursor-pointer select-none transition-all duration-300 rounded-xl hover:bg-[#18181c] hover:shadow-xl hover:scale-105 focus-within:scale-105 focus-within:shadow-xl"
+              className="text-center group cursor-pointer select-none transition-all duration-300 rounded-xl hover:bg-[#18181c] hover:shadow-xl hover:scale-105 focus-within:scale-105 focus-within:shadow-xl flex flex-col items-center justify-between h-full min-h-[9.5rem] md:min-h-[12rem]"
               tabIndex={0}
             >
               <div className="text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-300 group-hover:text-red-400 group-focus-within:text-red-400">
                 {stat.number}
               </div>
-              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.5em] flex items-center justify-center transition-colors duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200">
+              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.8em] md:min-h-[3.2em] flex items-center justify-center transition-colors duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200 text-center w-full">
                 {stat.title}
               </div>
-              <div className="flex justify-center opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
+              <div className="flex justify-center items-end h-8 md:h-8 w-8 md:w-8 opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
                 {stat.icon}
               </div>
             </div>

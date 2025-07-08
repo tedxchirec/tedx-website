@@ -55,7 +55,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl">
         {subtitle}
       </p>
-      
+
+      {/* Event Info Row */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-10 md:mb-12 w-full max-w-4xl mx-auto">
+        <div className="flex flex-col items-center md:items-start">
+          <span className="text-white text-2xl md:text-3xl font-bold mb-1 md:mb-2">Presented By</span>
+          <span className="inline-flex items-end text-3xl md:text-5xl font-extrabold text-white leading-none">
+            <span className="text-red-600">TED</span>
+            <span className="relative mx-0.5" style={{ fontSize: '0.7em', top: '-0.6em' }}>x</span>
+            <span className="text-white">Youth@CHIREC</span>
+          </span>
+        </div>
+        <div className="hidden md:block h-22 border-l-2 border-red-600 mx-2"></div>
+        <div className="flex flex-col items-center md:items-start justify-center min-w-[220px]">
+          <span className="text-white text-lg md:text-2xl font-bold mb-0.5 md:mb-1 text-center md:text-left">24 August, 2025</span>
+          <span className="text-red-500 text-sm md:text-base font-medium text-center md:text-left">CHIREC International School, Serilingampally</span>
+        </div>
+      </div>
+
       <button 
         onClick={handleCtaClick}
         className="border-2 border-red-500 text-white hover:bg-red-500 hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
