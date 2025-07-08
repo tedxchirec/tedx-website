@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { AutoTextSize } from 'auto-text-size'
 
 interface SpeakerCardProps {
   height: number | string;
@@ -43,22 +44,44 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
       />
       {/* Overlay */}
       <div
-        className={`absolute inset-0 bg-black/60 flex items-center justify-center z-10 transition-opacity duration-300 ${
+        className={`absolute inset-0 bg-black/60 z-10 transition-opacity duration-300 ${
           isMobile
             ? showOverlay
               ? 'opacity-100'
               : 'opacity-0'
             : 'opacity-0 group-hover:opacity-100'
         }`}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          height: '100%',
+        }}
       >
-        <span
-          className={`text-white text-center ${
-            descriptionClassName ||
-            "text-base md:text-lg font-medium md:font-semibold leading-snug md:leading-normal px-4"
-          } drop-shadow-lg`}
+        <AutoTextSize
+          mode="box"
+          minFontSizePx={8}
+          maxFontSizePx={160}
+          fontSizePrecisionPx={0.1}
+          as="div"
+          style={{
+            color: 'white',
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            lineHeight: 1.1,
+            fontWeight: 500,
+            wordBreak: 'break-word',
+            overflowWrap: 'break-word',
+          }}
+          className={descriptionClassName}
         >
           {description}
-        </span>
+        </AutoTextSize>
       </div>
     </div>
   );
