@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { AutoTextSize } from 'auto-text-size'
 
 interface SpeakerCardProps {
   height: number | string;
