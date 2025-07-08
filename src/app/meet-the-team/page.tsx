@@ -40,27 +40,22 @@ export default function MeetTheTeamPage() {
             <AnimatedSection key={dept} className="relative w-full" delay={0.1 * idx}>
               <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 text-red-500">{dept}</h2>
               <div
-                className="flex flex-wrap md:flex-nowrap justify-center items-center gap-8 md:gap-12 w-full px-2 md:px-8"
-                style={{
-                  rowGap: '3rem',
-                }}
+                className="flex flex-wrap justify-center gap-x-8 gap-y-12 w-full px-2 md:px-8"
               >
-                {members.map((member: TeamMember) => {
-                  // Responsive: keep 4:5 aspect ratio, scale to screen width on mobile
-                  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-                  const width = isMobile ? Math.min(window.innerWidth * 0.9, 340) : 425;
-                  const height = width * 1.25;
-                  return (
+                {members.map((member: TeamMember) => (
+                  <div
+                    key={member.Name}
+                    className="w-full max-w-[340px] aspect-[4/5] flex justify-center items-center"
+                  >
                     <SpeakerCard
-                      key={member.Name}
-                      height={height}
-                      width={width}
+                      width="100%"
+                      height="100%"
                       image={`/team/${member.image}`}
                       description={member.Description}
                       descriptionClassName="text-base md:text-lg font-normal leading-snug px-2"
                     />
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </AnimatedSection>
           );
