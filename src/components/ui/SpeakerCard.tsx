@@ -44,7 +44,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
       />
       {/* Overlay */}
       <div
-        className={`absolute inset-0 bg-black/60 z-10 transition-opacity duration-300 ${
+        className={`absolute inset-0 z-10 transition-opacity duration-300 ${
           isMobile
             ? showOverlay
               ? 'opacity-100'
@@ -52,6 +52,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
             : 'opacity-0 group-hover:opacity-100'
         }`}
         style={{
+          background: 'linear-gradient(135deg, rgba(116, 0, 0, 1), rgba(191,8,8,1))',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -60,28 +61,12 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
           height: '100%',
         }}
       >
-        <AutoTextSize
-          mode="box"
-          minFontSizePx={8}
-          maxFontSizePx={160}
-          fontSizePrecisionPx={0.1}
-          as="div"
-          style={{
-            color: 'white',
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            lineHeight: 1.1,
-            fontWeight: 500,
-            wordBreak: 'break-word',
-            overflowWrap: 'break-word',
-          }}
-          className={descriptionClassName}
+        <div
+          className={`text-white text-center flex flex-col items-center justify-center font-medium break-words w-full h-full px-2 leading-tight min-h-[2.5em] ${descriptionClassName || ''}`}
+          style={{ fontSize: '1.06rem' }}
         >
           {description}
-        </AutoTextSize>
+        </div>
       </div>
     </div>
   );
