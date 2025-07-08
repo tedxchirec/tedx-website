@@ -27,7 +27,9 @@ const Footer: React.FC = () => {
         {/* Logo and description */}
         <div className="flex-1 min-w-[220px] mb-8 md:mb-0 flex flex-col items-center md:items-start">
           <div className="text-2xl font-bold mb-2">
-            <span className="text-red-500">TEDx</span>Youth@CHIREC
+            <span className="text-red-500">TED</span>
+            <span className="text-red-500 relative mx-0.5" style={{ fontSize: '0.7em', top: '-0.6em' }}>x</span>
+            Youth@CHIREC
           </div>
           <div className="text-gray-300 text-sm leading-relaxed">
             Independently organized TED event.<br></br> © 2025 TEDxYouth@CHIREC,

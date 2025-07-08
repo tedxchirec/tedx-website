@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <span className="text-white text-2xl md:text-3xl font-bold mb-1 md:mb-2">Presented By</span>
           <span className="inline-flex items-end text-3xl md:text-5xl font-extrabold text-white leading-none">
             <span className="text-red-600">TED</span>
-            <span className="relative mx-0.5" style={{ fontSize: '0.7em', top: '-0.6em' }}>x</span>
+            <span className="text-red-500 relative mx-0.5" style={{ fontSize: '0.7em', top: '-0.6em' }}>x</span>
             <span className="text-white">Youth@CHIREC</span>
           </span>
         </div>
