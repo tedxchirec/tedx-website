@@ -68,7 +68,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
         <div className="hidden md:block h-22 border-l-2 border-red-600 mx-2"></div>
         <div className="flex flex-col items-center md:items-start justify-center min-w-[220px]">
-          <span className="text-white text-lg md:text-2xl font-bold mb-0.5 md:mb-1 text-center md:text-left">24 August, 2025</span>
+          <span className="text-white text-lg md:text-2xl font-bold mb-0.5 md:mb-1 text-center md:text-left">2d August, 2025</span>
           <span className="text-red-500 text-sm md:text-base font-medium text-center md:text-left">CHIREC International School, Serilingampally</span>
         </div>
       </div>

@@ -102,7 +102,7 @@ const ScheduleSection: React.FC = () => {
         Event Schedule
       </h2>
       <div className="text-lg md:text-xl text-gray-300 text-center mb-12">
-        August, 2025 • CHIREC ISRP Campus
+        2d August, 2025 • CHIREC ISRP Campus
       </div>
 
       {/* Timeline */}
