@@ -107,7 +107,7 @@ const ScheduleSection: React.FC = () => {
 
       {/* Timeline */}
       <div className="relative w-full max-w-4xl mx-auto">
-        {/* Vertical line */}
+        {/* Vertical line - only on desktop */}
         <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-red-900/30 via-white/10 to-red-900/30 -translate-x-1/2 z-0" />
         <div className="hidden md:grid md:grid-cols-3 md:gap-0">
           {schedule.map((item, idx) => {
@@ -199,15 +199,11 @@ const ScheduleSection: React.FC = () => {
             );
           })}
         </div>
-        {/* Mobile: stacked cards with timeline/dots on left */}
+        {/* Mobile: stacked cards, no timeline/dots */}
         <div className="md:hidden flex flex-col gap-12 relative">
-          {/* Vertical line for mobile */}
-          <div className="absolute left-6 top-0 h-full w-1 bg-gradient-to-b from-red-900/30 via-white/10 to-red-900/30 z-0" />
           {schedule.map((item) => (
             <div key={item.time + item.title} className="flex items-center">
-              {/* Dot */}
-              <span className="w-3 h-3 rounded-full bg-red-500 border-2 border-black z-10 mr-4 ml-2" />
-              {/* Card */}
+              {/* Card only, no dot or line */}
               <div className="w-full max-w-md mx-auto bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 flex flex-col gap-2 transition-all duration-300 active:scale-[0.98] hover:scale-[1.015] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-lg font-bold text-red-500 mr-2 min-w-[60px]">
@@ -221,7 +217,7 @@ const ScheduleSection: React.FC = () => {
                     {item.type}
                   </span>
                 </div>
-                      <div className="text-lg font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
+                <div className="text-lg font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                   {item.title}
                 </div>
                 {item.subtitle && (
@@ -236,12 +232,7 @@ const ScheduleSection: React.FC = () => {
             </div>
           ))}
         </div>
-        {/* Dots for mobile */}
-        <div className="md:hidden flex flex-col items-center absolute left-4 top-0 h-full z-0">
-          {schedule.map((_, idx) => (
-            <span key={idx} className="w-2 h-2 rounded-full bg-red-500 my-8" />
-          ))}
-        </div>
+        {/* No extra dots for mobile */}
       </div>
     </AnimatedSection>
   );
