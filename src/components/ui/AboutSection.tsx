@@ -71,7 +71,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       ),
       icon: (
         <svg
-          className="w-8 h-8 text-[#F5D6C6] mx-auto"
+          className="w-7 h-7 text-[#F5D6C6] mx-auto"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
