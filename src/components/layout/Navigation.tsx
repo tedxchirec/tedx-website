@@ -26,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
     { label: "Home", href: "/" },
     { label: "Meet The Team", href: "/meet-the-team" },
     { label: "Schedule", href: "/schedule" },
-    { label: "Rules & Regulations", href: "/regulations" },
+    // { label: "Rules & Regulations", href: "/regulations" },
   ];
 
   return (
@@ -52,9 +52,18 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <span className="text-2xl md:text-3xl font-bold transition-all duration-300 group-hover:scale-105">
-              <span className="text-red-500 group-hover:text-red-400 transition-colors">TED</span>
-              <span className="text-red-500 relative mx-0.5" style={{ fontSize: '0.7em', top: '-0.6em' }}>x</span>
-              <span className="text-white group-hover:text-gray-200 transition-colors">Youth@CHIREC</span>
+              <span className="text-red-500 group-hover:text-red-400 transition-colors">
+                TED
+              </span>
+              <span
+                className="text-red-500 relative mx-0.5"
+                style={{ fontSize: "0.7em", top: "-0.6em" }}
+              >
+                x
+              </span>
+              <span className="text-white group-hover:text-gray-200 transition-colors">
+                Youth@CHIREC
+              </span>
             </span>
           </Link>
 
@@ -65,9 +74,11 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                 key={item.href}
                 href={item.href}
                 className={`relative px-4 py-2 rounded-full transition-all duration-300 nav-hover
-                  ${pathname === item.href
-                    ? "text-red-500 bg-red-500/10 shadow shadow-red-500/10 hover:bg-red-500/20 hover:shadow-red-500/20"
-                    : "text-gray-300 hover:text-white hover:bg-white/5"}
+                  ${
+                    pathname === item.href
+                      ? "text-red-500 bg-red-500/10 shadow shadow-red-500/10 hover:bg-red-500/20 hover:shadow-red-500/20"
+                      : "text-gray-300 hover:text-white hover:bg-white/5"
+                  }
                 `}
               >
                 {item.label}
