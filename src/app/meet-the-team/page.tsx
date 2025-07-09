@@ -38,7 +38,7 @@ export default function MeetTheTeamPage() {
           const members = teamData.filter((m: TeamMember) => m.Department === dept);
           return (
             <AnimatedSection key={dept} className="relative w-full" delay={0.1 * idx}>
-              <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 text-red-500">{dept}</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-center mb-15 text-red-500">{dept}</h2>
               <div
                 className="flex flex-wrap justify-center gap-x-8 gap-y-12 w-full px-2 md:px-8"
               >

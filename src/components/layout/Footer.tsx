@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                   />
                 </svg>
               </span>
-              2d August, 2025
+              2nd August, 2025
             </li>
             <li className="flex items-center gap-2">
               <span className="text-red-500">
