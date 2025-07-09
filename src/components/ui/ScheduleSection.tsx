@@ -135,7 +135,7 @@ const ScheduleSection: React.FC = () => {
                           {item.type}
                         </span>
                       </div>
-                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-400 transition-colors duration-300">
+                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                         {item.title}
                       </div>
                       {item.subtitle && (
@@ -181,7 +181,7 @@ const ScheduleSection: React.FC = () => {
                           {item.type}
                         </span>
                       </div>
-                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-400 transition-colors duration-300">
+                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                         {item.title}
                       </div>
                       {item.subtitle && (
@@ -221,7 +221,7 @@ const ScheduleSection: React.FC = () => {
                     {item.type}
                   </span>
                 </div>
-                <div className="text-lg font-bold text-white leading-tight group-hover/card:text-red-400 transition-colors duration-300">
+                      <div className="text-lg font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                   {item.title}
                 </div>
                 {item.subtitle && (
