@@ -26,7 +26,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
     { label: "Home", href: "/" },
     { label: "Meet The Team", href: "/meet-the-team" },
     { label: "Schedule", href: "/schedule" },
-    // { label: "Rules & Regulations", href: "/regulations" },
+    { label: "Rules & Regulations", href: "/regulations" },
   ];
 
   return (
