@@ -75,7 +75,7 @@ const SpeakersSection: React.FC = () => (
             width={240}
             image={speaker.image}
             description={speaker.description}
-            descriptionClassName="inter-font text-base md:text-lg font-medium md:font-semibold leading-snug md:leading-normal px-2 md:px-4"
+            descriptionClassName="text-base md:text-lg font-medium md:font-semibold leading-snug md:leading-normal px-2 md:px-4"
           />
         ))}
       </div>
