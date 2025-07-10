@@ -54,7 +54,7 @@ export default function MeetTheTeamPage() {
             x
           </span>
         </span>
-        <span className="font-medium">Youth@CHIREC</span> Team
+        <span className="font-light">Youth@CHIREC</span> Team
       </h1>
       <div className="w-full flex flex-col gap-20 pb-16 md:pb-24">
         {departments.map((dept: string, idx: number) => {
