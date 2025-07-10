@@ -98,10 +98,10 @@ const ScheduleSection: React.FC = () => {
         ></div>
       </div>
 
-      <h2 className="text-3xl md:text-5xl font-bold text-center mb-2">
+      <h2 className="ibm-font text-3xl md:text-5xl font-bold text-center mb-2">
         Event Schedule
       </h2>
-      <div className="text-lg md:text-xl text-gray-300 text-center mb-12">
+      <div className="inter-font text-lg md:text-xl text-gray-300 text-center mb-12">
         2nd August, 2025 • CHIREC ISRP Campus
       </div>
 
@@ -123,11 +123,11 @@ const ScheduleSection: React.FC = () => {
                   {isLeft && (
                     <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
+                        <span className="inter-font text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
                           {item.time}
                         </span>
                         <span
-                          className={`text-xs px-2 py-0.5 rounded-full font-semibold capitalize ${
+                          className={`geist-font text-xs px-2 py-0.5 rounded-full font-medium capitalize ${
                             typeColors[item.type] ||
                             "bg-gray-700/70 text-gray-200"
                           }`}
@@ -135,15 +135,15 @@ const ScheduleSection: React.FC = () => {
                           {item.type}
                         </span>
                       </div>
-                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
+                      <div className="ibm-font text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                         {item.title}
                       </div>
                       {item.subtitle && (
-                        <div className="text-sm text-gray-400 font-medium mb-1">
+                        <div className="ibm-font text-sm text-gray-400 font-medium mb-1">
                           {item.subtitle}
                         </div>
                       )}
-                      <div className="text-sm md:text-base text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
+                      <div className="inter-font text-sm md:text-base text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
                         {item.description}
                       </div>
                     </div>
@@ -169,11 +169,11 @@ const ScheduleSection: React.FC = () => {
                   {!isLeft && (
                     <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
+                        <span className="inter-font text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
                           {item.time}
                         </span>
                         <span
-                          className={`text-xs px-2 py-0.5 rounded-full font-semibold capitalize ${
+                          className={`geist-font text-xs px-2 py-0.5 rounded-full font-medium capitalize ${
                             typeColors[item.type] ||
                             "bg-gray-700/70 text-gray-200"
                           }`}
@@ -181,15 +181,15 @@ const ScheduleSection: React.FC = () => {
                           {item.type}
                         </span>
                       </div>
-                      <div className="text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
+                      <div className="ibm-font text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                         {item.title}
                       </div>
                       {item.subtitle && (
-                        <div className="text-sm text-gray-400 font-medium mb-1">
+                        <div className="ibm-font text-sm text-gray-400 font-medium mb-1">
                           {item.subtitle}
                         </div>
                       )}
-                      <div className="text-sm md:text-base text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
+                      <div className="inter-font text-sm md:text-base text-gray-300 group-hover/card:text-gray-100 transition-colors duration-300">
                         {item.description}
                       </div>
                     </div>

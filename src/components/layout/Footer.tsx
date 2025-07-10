@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-20 text-center md:text-left">
         {/* Logo and description */}
         <div className="flex-1 min-w-[220px] mb-8 md:mb-0 flex flex-col items-center md:items-start">
-          <div className="text-2xl font-bold mb-2">
+          <div className="ibm-font text-2xl font-bold mb-2">
             <span className="text-red-500">TED</span>
             <span
               className="text-red-500 relative mx-0.5"
@@ -36,15 +36,15 @@ const Footer: React.FC = () => {
             </span>
             Youth@CHIREC
           </div>
-          <div className="text-gray-300 text-sm leading-relaxed">
+          <div className="inter-font text-gray-300 text-sm leading-relaxed">
             Independently organized TED event.<br></br> © 2025 TEDxYouth@CHIREC,
             under license from TED.
           </div>
         </div>
         {/* Quick Links */}
         <div className="flex-1 min-w-[160px] mb-8 md:mb-0 flex flex-col items-center md:items-start">
-          <div className="font-semibold mb-2">Quick Links</div>
-          <ul className="space-y-1 text-gray-300 text-sm">
+          <div className="inter-font font-semibold mb-2">Quick Links</div>
+          <ul className="inter-font space-y-1 text-gray-300 text-sm">
             <li>
               <Link href="/" className="hover:text-white transition">
                 Home
@@ -72,8 +72,8 @@ const Footer: React.FC = () => {
         </div>
         {/* Details */}
         <div className="flex-1 min-w-[200px] flex flex-col items-center md:items-start">
-          <div className="font-semibold mb-2">Details</div>
-          <ul className="space-y-2 text-gray-300 text-sm">
+          <div className="inter-font font-semibold mb-2">Details</div>
+          <ul className="inter-font space-y-2 text-gray-300 text-sm">
             <li className="flex items-center gap-2">
               <span className="text-red-500">
                 {/* Location SVG */}
@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-10 border-t border-white/10 pt-4 text-center text-xs text-gray-500">
+      <div className="geist-font mt-10 border-t border-white/10 pt-4 text-center text-xs text-gray-500">
         &copy; 2025 TEDxYouth@CHIREC. All rights reserved.
       </div>
     </footer>
