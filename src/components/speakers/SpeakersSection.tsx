@@ -33,12 +33,12 @@ const studentSpeakers = [
   },
   {
     description:
-      "Manya is a Grade 12 IBDP student at CHIREC. She started Project SignVerse to raise awareness about Indian Sign Language through interactive, empathy-driven sessions. Later, as part of ISB’s I-Venture program, she pitched AccessAbility — an AI-based idea to make sign language more accessible in everyday spaces. Outside of that, she’s usually painting, journaling, or learning Mandarin and Korean — with more languages definitely on the way. Her TEDx talk explores how silence, failure, and connection intertwine — and the quiet lessons they leave behind.",
+      "Manya is a Grade 12 IBDP student at CHIREC. She started Project SignVerse to raise awareness about Indian Sign Language through interactive, empathy-driven sessions. Later, as part of ISB’s I-Venture program, she pitched AccessAbility — an AI-based idea to make sign language more accessible in everyday spaces. Outside of that, she’s usually painting, journaling, or learning Mandarin and Korean — with more languages definitely on the way. Her TEDx talk explores how silence, failure, and connection intertwine — and the quiet lessons they leave behind.",
     image: "/speakers/student3.png",
   },
   {
     description:
-      "Thrinay is a driven student passionate about creating impact through leadership and innovation. As former school president and founder of CAS Connect, a platform linking Hyderabad’s youth and corporate organizations with NGOs, he blends tech with social good. His work with NGOs and victories at various  business summits  reflect his commitment to civic engagement and creative communication. A top scorer in Economics, Thrinay is also an avid Formula One fan, listener, and fast learner. In his talk, he explores failure: not as defeat, but as a chance to grow. He believes our response to failure shapes who we are more than the failure itself.",
+      "Thrinay is a driven student passionate about creating impact through leadership and innovation. As former school president and founder of CAS Connect, a platform linking Hyderabad’s youth and corporate organizations with NGOs, he blends tech with social good. His work with NGOs and victories at various  business summits  reflect his commitment to civic engagement and creative communication. A top scorer in Economics, Thrinay is also an avid Formula One fan, listener, and fast learner. In his talk, he explores failure: not as defeat, but as a chance to grow. He believes our response to failure shapes who we are more than the failure itself.",
     image: "/speakers/student4.png",
   },
 ];
@@ -95,7 +95,8 @@ const SpeakersSection: React.FC = () => (
     </div>
     <style jsx>{`
       @media (max-width: 768px) {
-        section, .animated-section {
+        section,
+        .animated-section {
           padding-top: 2rem;
           padding-bottom: 2rem;
         }
