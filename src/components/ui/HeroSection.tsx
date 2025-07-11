@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   const NAVBAR_HEIGHT = 80;
   const JUMPER_MIN_HEIGHT = 120;
-  const JUMPER_MAX_HEIGHT = 700;
+  const JUMPER_MAX_HEIGHT = 1000;
   const JUMPER_PADDING_DESKTOP = 40; // px, more padding on desktop
   const JUMPER_PADDING_MOBILE = 16; // px, less padding on mobile
 
@@ -48,7 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       const isMobile = windowWidth < 768;
       const padding = isMobile ? JUMPER_PADDING_MOBILE : JUMPER_PADDING_DESKTOP;
       // Available space for jumper
-      const available = windowHeight - NAVBAR_HEIGHT - estimatedCliffHeight - padding * 2;
+      const available = windowHeight - NAVBAR_HEIGHT - estimatedCliffHeight;
       const desired = Math.max(JUMPER_MIN_HEIGHT, Math.min(available, JUMPER_MAX_HEIGHT));
       setJumperHeight(desired);
       // Place jumper just above the cliff, but lower on mobile
@@ -56,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       // On mobile: bottom = estimatedCliffHeight * 0.7 (move lower) + padding
       const bottom = isMobile
         ? `${estimatedCliffHeight * 0.7 + padding}px`
-        : `${estimatedCliffHeight + padding}px`;
+        : `${estimatedCliffHeight - padding}px`;
       setJumperBottom(bottom);
     }
     updateJumperSize();
