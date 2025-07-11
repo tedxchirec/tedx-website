@@ -71,6 +71,7 @@ export default function MeetTheTeamPage() {
                 {dept}
               </h2>
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 w-full px-2 md:px-8">
+
                 {members.map((member: TeamMember) => (
                   <div
                     key={member.Name}

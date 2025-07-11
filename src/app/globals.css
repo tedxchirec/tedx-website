@@ -26,3 +26,6 @@ html {
 .geist-font {
   font-family: var(--font-geist);
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
