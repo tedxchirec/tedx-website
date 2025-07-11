@@ -7,9 +7,18 @@ export default function FourOFourPage() {
       {/* Subtle Abstract Shapes on the sides */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Centered and mobile-friendly shapes */}
-        <div className="absolute left-1/2 top-8 w-32 h-32 bg-red-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '0.3s', transform: 'translateX(-50%)' }}></div>
-        <div className="absolute left-1/2 bottom-8 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.1s', transform: 'translateX(-50%)' }}></div>
-        <div className="absolute left-1/2 top-1/2 w-20 h-20 bg-red-400/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '2.2s', transform: 'translate(-50%, -50%)' }}></div>
+        <div
+          className="absolute left-1/2 top-8 w-32 h-32 bg-red-500/10 rounded-full blur-2xl animate-float"
+          style={{ animationDelay: "0.3s", transform: "translateX(-50%)" }}
+        ></div>
+        <div
+          className="absolute left-1/2 bottom-8 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse"
+          style={{ animationDelay: "1.1s", transform: "translateX(-50%)" }}
+        ></div>
+        <div
+          className="absolute left-1/2 top-1/2 w-20 h-20 bg-red-400/10 rounded-full blur-2xl animate-float"
+          style={{ animationDelay: "2.2s", transform: "translate(-50%, -50%)" }}
+        ></div>
         {/* Existing shapes, now with responsive tweaks */}
         <div className="hidden md:block absolute left-4 md:left-10 top-1/4 w-20 md:w-32 h-20 md:h-32 bg-red-500/5 rounded-full blur-xl animate-pulse"></div>
         <div className="hidden md:block absolute left-8 md:left-20 top-1/2 w-10 md:w-16 h-10 md:h-16 bg-white/3 rounded-lg rotate-45 animate-float"></div>
@@ -22,7 +31,8 @@ export default function FourOFourPage() {
         <div className="hidden md:block absolute bottom-6 md:bottom-12 left-1/4 w-5 md:w-8 h-5 md:h-8 bg-red-400/7 rounded-lg rotate-45 animate-pulse [animation-delay:2.5s]"></div>
         <div className="hidden md:block absolute bottom-10 md:bottom-20 right-1/4 w-6 md:w-10 h-6 md:h-10 bg-white/3 rounded-full animate-float [animation-delay:4s]"></div>
       </div>
-      <h1 className="text-[5rem] md:text-[8rem] font-extrabold text-red-400 drop-shadow-lg mb-2 leading-none relative z-10 animate-glow text-glow">404
+      <h1 className="geist-font text-[5rem] md:text-[8rem] font-extrabold text-red-500 drop-shadow-lg mb-2 leading-none relative z-10 animate-glow text-glow">
+        404
         {/* Aura/Holo effect */}
         <span className="absolute inset-0 pointer-events-none -z-10">
           <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-glow" />

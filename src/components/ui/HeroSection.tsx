@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface HeroSectionProps {
   title?: string;
@@ -37,7 +37,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   // Responsive: detect available space for jumper and device size
   const [jumperHeight, setJumperHeight] = useState(320);
-  const [jumperBottom, setJumperBottom] = useState('28vh');
+  const [jumperBottom, setJumperBottom] = useState("28vh");
   useEffect(() => {
     function updateJumperSize() {
       const windowHeight = window.innerHeight;
@@ -49,7 +49,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       const padding = isMobile ? JUMPER_PADDING_MOBILE : JUMPER_PADDING_DESKTOP;
       // Available space for jumper
       const available = windowHeight - NAVBAR_HEIGHT - estimatedCliffHeight;
-      const desired = Math.max(JUMPER_MIN_HEIGHT, Math.min(available, JUMPER_MAX_HEIGHT));
+      const desired = Math.max(
+        JUMPER_MIN_HEIGHT,
+        Math.min(available, JUMPER_MAX_HEIGHT)
+      );
       setJumperHeight(desired);
       // Place jumper just above the cliff, but lower on mobile
       // On desktop: bottom = estimatedCliffHeight + padding
@@ -60,14 +63,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       setJumperBottom(bottom);
     }
     updateJumperSize();
-    window.addEventListener('resize', updateJumperSize);
-    return () => window.removeEventListener('resize', updateJumperSize);
+    window.addEventListener("resize", updateJumperSize);
+    return () => window.removeEventListener("resize", updateJumperSize);
   }, []);
 
   return (
     <div
       className={`relative z-10 flex flex-col items-center justify-center h-full min-h-[480px] md:min-h-[600px] px-0 text-center ${className}`}
-      style={{ background: 'linear-gradient(135deg, #7c0a0a 0%, #1a0101 100%)', overflow: 'visible' }}
+      style={{
+        background: "linear-gradient(135deg, #7c0a0a 0%, #1a0101 100%)",
+        overflow: "visible",
+      }}
     >
       {/* Cliff as full-width SVG, anchored to bottom, no forced height */}
       <Image
@@ -77,15 +83,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         width={1920}
         height={400}
         style={{
-          width: '100vw',
-          height: 'auto',
+          width: "100vw",
+          height: "auto",
           minHeight: 0,
-          maxHeight: 'none',
-          objectFit: 'contain',
-          objectPosition: 'bottom',
+          maxHeight: "none",
+          objectFit: "contain",
+          objectPosition: "bottom",
           zIndex: 1,
-          pointerEvents: 'none',
-          userSelect: 'none',
+          pointerEvents: "none",
+          userSelect: "none",
         }}
         draggable="false"
         priority
@@ -98,16 +104,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         width={600}
         height={800}
         style={{
-          width: 'auto',
+          width: "auto",
           height: jumperHeight,
           maxHeight: JUMPER_MAX_HEIGHT,
           minHeight: JUMPER_MIN_HEIGHT,
-          transform: 'translateX(-50%)',
+          transform: "translateX(-50%)",
           bottom: jumperBottom,
           zIndex: 2,
-          transition: 'height 0.2s, bottom 0.2s',
-          pointerEvents: 'none',
-          userSelect: 'none',
+          transition: "height 0.2s, bottom 0.2s",
+          pointerEvents: "none",
+          userSelect: "none",
         }}
         draggable="false"
         priority
@@ -116,20 +122,37 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Main Content Overlay - centered */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full pt-10 md:pt-20 pb-8">
         {/* Title with arrows as part of the F glyph, matching the reference */}
-        <h1 className="font-extrabold text-white text-center leading-[0.95] text-[2.7rem] md:text-6xl lg:text-7xl mb-4 drop-shadow-xl" style={{ letterSpacing: '-0.01em', position: 'relative' }}>
+        <h1
+          className="font-extrabold text-white text-center leading-[0.95] text-[2.7rem] md:text-6xl lg:text-7xl mb-4 drop-shadow-xl"
+          style={{ letterSpacing: "-0.01em", position: "relative" }}
+        >
           {/* First line: F with arrow as part of the glyph, true overlay */}
-          <span className="flex flex-row items-center justify-center gap-2">
-            <span className="relative" style={{ display: 'inline-block', fontWeight: 900}}>
-              <span style={{ fontWeight: 900, fontFamily: 'inherit', fontSize: '1em', position: 'relative', display: 'inline-block', lineHeight: 1 }}>
+          <span className="geist-font flex flex-row items-center justify-center gap-2">
+            <span
+              className="relative"
+              style={{ display: "inline-block", fontWeight: 900 }}
+            >
+              <span
+                style={{
+                  fontWeight: 900,
+                  fontFamily: "inherit",
+                  fontSize: "1em",
+                  position: "relative",
+                  display: "inline-block",
+                  lineHeight: 1,
+                }}
+              >
                 F
                 {/* Flatter triangle, base flush with F's top bar, width just wider than F's bar */}
                 <svg
-                  width="0.28em" height="0.7em" viewBox="0 0 2 20"
+                  width="0.28em"
+                  height="0.6em"
+                  viewBox="0 0 2 20"
                   style={{
-                    position: 'absolute',
-                    left: '0.5em', // aligns base with F's top bar
-                    top: '0.03em', // fine-tune as needed
-                    pointerEvents: 'none',
+                    position: "absolute",
+                    left: "0.46em", // aligns base with F's top bar
+                    top: "0.04em", // fine-tune as needed
+                    pointerEvents: "none",
                   }}
                   fill="white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -138,21 +161,35 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 </svg>
               </span>
             </span>
-            <span >AIL</span>
+            <span>AIL</span>
           </span>
           {/* Second line: F with arrow as part of the glyph, true overlay */}
-          <span className="flex flex-row items-center justify-center gap-2 mt-2">
-            <span className="relative" style={{ display: 'inline-block', fontWeight: 900}}>
-              <span style={{ fontWeight: 900, fontFamily: 'inherit', fontSize: '1em', position: 'relative', display: 'inline-block', lineHeight: 1 }}>
+          <span className="geist-font flex flex-row items-center justify-center gap-2 mt-2">
+            <span
+              className="relative"
+              style={{ display: "inline-block", fontWeight: 900 }}
+            >
+              <span
+                style={{
+                  fontWeight: 900,
+                  fontFamily: "inherit",
+                  fontSize: "1em",
+                  position: "relative",
+                  display: "inline-block",
+                  lineHeight: 1,
+                }}
+              >
                 F
                 {/* Flatter triangle, base flush with F's top bar, width just wider than F's bar */}
                 <svg
-                  width="0.28em" height="0.7em" viewBox="0 0 2 20"
+                  width="0.28em"
+                  height="0.6em"
+                  viewBox="0 0 2 20"
                   style={{
-                    position: 'absolute',
-                    left: '0.5em', // aligns base with F's top bar
-                    top: '0.03em', // fine-tune as needed
-                    pointerEvents: 'none',
+                    position: "absolute",
+                    left: "0.46em", // aligns base with F's top bar
+                    top: "0.04em", // fine-tune as needed
+                    pointerEvents: "none",
                   }}
                   fill="white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -162,23 +199,43 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </span>
             </span>
             <span>ORWARD</span>
-            <div className="flex w-full justify-center">
-          </div>
+            <div className="flex w-full justify-center"></div>
           </span>
         </h1>
         {/* Details Section - modern card style, tighter TEDx spacing */}
         <div className="mt-6 mb-10 bg-white/10 rounded-2xl px-6 py-5 shadow-lg flex flex-col items-center gap-2 w-full max-w-xl border border-white/20 backdrop-blur-sm">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2">
-            <span className="text-white text-lg md:text-xl font-medium">Presented by</span>
-            <span className="flex flex-row items-center gap-0.5">
-              <span className="text-red-600 font-extrabold text-xl md:text-2xl tracking-tight">TED</span>
-              <span className="text-red-500 font-extrabold text-lg md:text-xl align-super" style={{ fontSize: '0.7em', top: '-0.6em', position: 'relative', marginLeft: '-0.2em', marginRight: '-0.1em' }}>x</span>
-              <span className="text-white font-extrabold text-lg md:text-xl">Youth@CHIREC</span>
+            <span className="inter-font text-white text-lg md:text-xl font-medium">
+              Presented by
+            </span>
+            <span className="ibm-font flex flex-row items-center gap-0.5">
+              <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight">
+                TED
+              </span>
+              <span
+                className="text-red-500 font-extrabold text-lg md:text-xl align-super"
+                style={{
+                  fontSize: "0.7em",
+                  top: "-0.6em",
+                  position: "relative",
+                  marginLeft: "-0.2em",
+                  marginRight: "-0.1em",
+                }}
+              >
+                x
+              </span>
+              <span className="text-white font-light text-lg md:text-xl">
+                Youth@CHIREC
+              </span>
             </span>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2">
-            <span className="text-white font-bold text-base md:text-lg">2nd August, 2025</span>
-            <span className="text-red-400 text-xs md:text-base font-medium">CHIREC International School, Serilingampally</span>
+          <div className="inter-font flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2">
+            <span className="text-white font-bold text-base md:text-lg">
+              2nd August, 2025
+            </span>
+            <span className="text-red-400 text-xs md:text-base font-medium">
+              CHIREC International School, Serilingampally
+            </span>
           </div>
         </div>
         <button

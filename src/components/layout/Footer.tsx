@@ -26,15 +26,15 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-20 text-center md:text-left">
         {/* Logo and description */}
         <div className="flex-1 min-w-[220px] mb-8 md:mb-0 flex flex-col items-center md:items-start">
-          <div className="ibm-font text-2xl font-bold mb-2">
-            <span className="text-red-500">TED</span>
+          <div className="ibm-font text-2xl mb-2">
+            <span className="text-red-500 font-bold">TED</span>
             <span
-              className="text-red-500 relative mx-0.5"
+              className="text-red-500 relative mx-0.5 font-bold"
               style={{ fontSize: "0.7em", top: "-0.6em" }}
             >
               x
             </span>
-            Youth@CHIREC
+            <span className="font-light">Youth@CHIREC</span>
           </div>
           <div className="inter-font text-gray-300 text-sm leading-relaxed">
             Independently organized TED event.<br></br> © 2025 TEDxYouth@CHIREC,
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link href="/regulations" className="hover:text-white transition">
-                Regulations
+                Rules & Regulations
               </Link>
             </li>
             <li>
@@ -148,10 +148,10 @@ const Footer: React.FC = () => {
                 </svg>
               </span>
               <a
-                href="mailto:tedxchirec@gmail.com"
+                href="mailto:tedx@chirec.ac.in"
                 className="hover:text-white transition"
               >
-                tedxchirec@gmail.com
+                tedx@chirec.ac.in
               </a>
             </li>
             <li className="flex items-center gap-2">
