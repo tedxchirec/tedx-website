@@ -67,7 +67,7 @@ export default function MeetTheTeamPage() {
               className="relative w-full"
               delay={0.1 * idx}
             >
-              <h2 className="ibm-font text-2xl md:text-4xl font-bold text-center mb-15 text-red-500">
+              <h2 className="ibm-font text-2xl md:text-4xl font-bold text-center mb-19 text-red-500">
                 {dept}
               </h2>
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 w-full px-2 md:px-8">
