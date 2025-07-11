@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import AnimatedBackground from "@/components/ui/AnimatedBackground";
 import HeroSection from "@/components/ui/HeroSection";
 import AboutSection from "@/components/ui/AboutSection";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -17,8 +16,6 @@ export default function HomePage() {
     <>
       {/* Hero Section with its own background and animation */}
       <AnimatedSection className="relative h-screen">
-        {/* Animated Background */}
-        <AnimatedBackground />
 
         {/* Hero Section */}
         <HeroSection
