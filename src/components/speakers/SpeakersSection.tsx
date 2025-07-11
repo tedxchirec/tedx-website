@@ -48,8 +48,8 @@ const SpeakersSection: React.FC = () => (
     {/* Unique background for guest speakers */}
     <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
     <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
-    <div className="max-w-5xl mx-auto pb-8 md:pb-12">
-      <h2 className="ibm-font text-3xl md:text-4xl font-extrabold text-red-500 mb-8 md:mb-12 tracking-tight drop-shadow-lg text-center">
+    <div className="w-full flex flex-col items-center pb-8 md:pb-12">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-red-500 mb-8 md:mb-12 tracking-tight drop-shadow-lg text-center">
         Guest Speakers
       </h2>
       <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
@@ -63,7 +63,7 @@ const SpeakersSection: React.FC = () => (
               height="100%"
               image={speaker.image}
               description={speaker.description}
-              descriptionClassName="inter-font text-base md:text-lg font-medium md:font-semibold leading-snug md:leading-normal px-2 md:px-4"
+              descriptionClassName="text-[15px] font-normal leading-snug px-2"
             />
           </div>
         ))}
@@ -72,8 +72,8 @@ const SpeakersSection: React.FC = () => (
     {/* Unique background for student speakers */}
     <div className="absolute right-0 bottom-0 w-40 h-40 bg-gradient-to-tl from-red-500/20 to-transparent rounded-full blur-2xl -z-10" />
     <div className="absolute left-0 bottom-1/2 w-32 h-32 bg-red-400/10 rounded-full blur-2xl -z-10" />
-    <div className="max-w-5xl mx-auto pb-10 md:pb-16">
-      <h2 className="ibm-font text-3xl md:text-4xl font-extrabold text-red-500 mb-8 md:mb-12 tracking-tight drop-shadow-lg text-center">
+    <div className="w-full flex flex-col items-center pb-10 md:pb-16">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-red-500 mb-8 md:mb-12 tracking-tight drop-shadow-lg text-center">
         Student Speakers
       </h2>
       <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
@@ -95,8 +95,7 @@ const SpeakersSection: React.FC = () => (
     </div>
     <style jsx>{`
       @media (max-width: 768px) {
-        section,
-        .animated-section {
+        section, .animated-section {
           padding-top: 2rem;
           padding-bottom: 2rem;
         }
