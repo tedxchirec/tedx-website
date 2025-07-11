@@ -21,7 +21,6 @@ export default function HomePage() {
         <HeroSection
           title="Fail Forward"
           subtitle="Ideas that challenge our perception of reality."
-          ctaText="Book Now"
           onCtaClick={handleBookNowClick}
         />
       </AnimatedSection>

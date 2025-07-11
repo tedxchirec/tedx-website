@@ -12,7 +12,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  ctaText = "Book Now",
+  ctaText = "Reserve Your Spot",
   onCtaClick,
   className = "",
 }) => {
