@@ -26,8 +26,8 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
     { label: "Home", href: "/" },
     { label: "Meet The Team", href: "/meet-the-team" },
     { label: "Schedule", href: "/schedule" },
-    { label: "Rules & Regulations", href: "/regulations" },
-    { label: "Frequently Asked Questions", href: "/faq" },
+    { label: "Guidelines", href: "/regulations" },
+    { label: "FAQ", href: "/faq" },
   ];
 
   return (
@@ -82,7 +82,9 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                   }
                 `}
               >
-                <span className="w-full break-words leading-tight text-center">{item.label}</span>
+                <span className="w-full break-words leading-tight text-center">
+                  {item.label}
+                </span>
                 {pathname === item.href && (
                   <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-red-500 rounded-full"></span>
                 )}
