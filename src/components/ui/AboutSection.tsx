@@ -137,7 +137,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
 
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
         {/* Header */}
-        <h2 className="ibm-font text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">
+        <h2 className="ibm-font text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 pt-8 md:pt-10">
           About{" "}
           <span className="font-extrabold text-red-500">
             TED
