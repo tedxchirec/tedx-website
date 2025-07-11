@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface HeroSectionProps {
   title?: string;
@@ -69,10 +70,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       style={{ background: 'linear-gradient(135deg, #7c0a0a 0%, #1a0101 100%)', overflow: 'visible' }}
     >
       {/* Cliff as full-width SVG, anchored to bottom, no forced height */}
-      <img
+      <Image
         src="/hero/cliff.svg"
         alt="Cliff"
         className="absolute left-0 bottom-0"
+        width={1920}
+        height={400}
         style={{
           width: '100vw',
           height: 'auto',
@@ -85,12 +88,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           userSelect: 'none',
         }}
         draggable="false"
+        priority
       />
       {/* Jumper - centered, as large as possible, never overlaps navbar or cliffs, position adapts to device size */}
-      <img
+      <Image
         src="/hero/jump.svg"
         alt="Jumping silhouette hero"
         className="absolute left-1/2"
+        width={600}
+        height={800}
         style={{
           width: 'auto',
           height: jumperHeight,
@@ -104,6 +110,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           userSelect: 'none',
         }}
         draggable="false"
+        priority
       />
 
       {/* Main Content Overlay - centered */}
