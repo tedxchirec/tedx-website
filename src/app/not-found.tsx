@@ -28,17 +28,19 @@ export default function FourOFourPage() {
           <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-glow" />
         </span>
       </h1>
-      <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">This Idea Hasn&apos;t Been Discovered Yet</h2>
-      <p className="text-base md:text-lg text-gray-300 max-w-2xl mb-8">
-        You&apos;ve ventured beyond the known path. The page you&apos;re looking for doesn&apos;t exist or has been moved.
+      <h2 className="ibm-font text-2xl md:text-4xl font-bold text-white mb-4">
+        This Idea Hasn&apos;t Been Discovered Yet
+      </h2>
+      <p className="inter-font text-base md:text-lg text-gray-300 max-w-2xl mb-8">
+        You&apos;ve ventured beyond the known path. The page you&apos;re looking
+        for doesn&apos;t exist or has been moved.
       </p>
       <div className="flex justify-center">
         <Link
           href="/"
-          className="group relative overflow-hidden bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+          className="inter-font font-medium border-2 border-red-500 text-white hover:bg-red-500 hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
         >
-          <span className="relative z-10">&larr; Back to Homepage</span>
-          <span className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          &larr; Back to Homepage
         </Link>
       </div>
     </div>

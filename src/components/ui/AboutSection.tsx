@@ -71,7 +71,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       ),
       icon: (
         <svg
-          className="w-8 h-8 text-[#F5D6C6] mx-auto"
+          className="w-7 h-7 text-[#F5D6C6] mx-auto"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -137,12 +137,22 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
 
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
         {/* Header */}
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 pt-8 md:pt-10">
-          About <span className="text-red-500">TEDx</span>Youth@CHIREC
+        <h2 className="ibm-font text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">
+          About{" "}
+          <span className="font-extrabold text-red-500">
+            TED
+            <span
+              className="relative mx-0.5"
+              style={{ fontSize: "0.7em", top: "-0.6em" }}
+            >
+              x
+            </span>
+          </span>
+          <span className="font-light">Youth@CHIREC</span>
         </h2>
 
         {/* Description */}
-        <p className="text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
+        <p className="inter-font text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
           TEDxYouth@CHIREC is a crucible of innovation, where the world&apos;s
           most audacious thinkers and creators converge. We don&apos;t just
           share ideas; we ignite movements. This year, we venture beyond the
@@ -155,13 +165,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center group cursor-pointer select-none transition-all duration-300 rounded-xl hover:bg-[#18181c] hover:shadow-xl hover:scale-105 focus-within:scale-105 focus-within:shadow-xl flex flex-col items-center justify-between h-full min-h-[9.5rem] md:min-h-[12rem]"
+              className="text-center group cursor-pointer select-none transition-all duration-300 rounded-xl hover:bg-[#18181c] hover:shadow-xl hover:scale-105 focus-within:scale-105 focus-within:shadow-xl flex flex-col items-center justify-between h-full min-h-[9.5rem] md:min-h-[12rem] py-2"
               tabIndex={0}
             >
-              <div className="text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-300 group-hover:text-red-400 group-focus-within:text-red-400">
+              <div className="geist-font text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-300 group-hover:text-red-400 group-focus-within:text-red-400">
                 {stat.number}
               </div>
-              <div className="text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.8em] md:min-h-[3.2em] flex items-center justify-center transition-colors duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200 text-center w-full">
+              <div className="geist-font text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.8em] md:min-h-[3.2em] flex items-center justify-center transition-colors duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200 text-center w-full">
                 {stat.title}
               </div>
               <div className="flex justify-center items-end h-8 md:h-8 w-8 md:w-8 opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
@@ -178,8 +188,14 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
               {/* Image placeholder with TEDx branding */}
               <div className="w-full h-56 md:h-80 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                 <div className="text-center p-6 md:p-8">
-                  <div className="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-3">
-                    TED<span className="text-red-500">x</span>
+                  <div className="text-2xl md:text-4xl font-bold text-red-500 mb-2 md:mb-3">
+                    TED
+                    <span
+                      className="relative mx-0.5"
+                      style={{ fontSize: "0.7em", top: "-0.6em" }}
+                    >
+                      x
+                    </span>
                   </div>
                   <div className="text-base md:text-lg text-gray-300 mb-1 md:mb-2">
                     CHIREC
@@ -204,7 +220,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
 
         {/* Call to Action */}
         <button
-          className="bg-red-500 hover:bg-red-600 text-white px-5 md:px-6 lg:px-7 py-2.5 md:py-3 lg:py-3.5 rounded-full text-base  font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 max-w-xs md:max-w-sm mx-auto md:text-base lg:text-lg"
+          className="inter-font bg-red-500 hover:bg-red-600 text-white px-5 md:px-6 lg:px-7 py-2.5 md:py-3 lg:py-3.5 rounded-full text-base  font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 max-w-xs md:max-w-sm mx-auto md:text-base lg:text-lg"
           style={{
             minWidth: "unset",
             fontSize: "1rem",
@@ -212,6 +228,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
             paddingRight: "1.5rem",
             paddingTop: "0.75rem",
             paddingBottom: "0.75rem",
+            marginBottom: "1.5rem",
           }}
         >
           Book Now

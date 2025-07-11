@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -14,14 +14,14 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   ctaText = "Book Now",
   onCtaClick,
-  className = ''
+  className = "",
 }) => {
   const handleCtaClick = () => {
     if (onCtaClick) {
       onCtaClick();
     } else {
       // Default behavior - scroll to booking section or external link
-      console.log('Book Now clicked');
+      console.log("Book Now clicked");
     }
   };
 
