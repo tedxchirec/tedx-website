@@ -77,7 +77,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
           className={`inter-font text-white text-center flex flex-col items-center justify-center font-normal break-words w-full h-full px-2 leading-tight min-h-[2.5em] ${
             descriptionClassName || ""
           }`}
-          style={{ fontSize: "1.03rem" }}
+          style={{ fontSize: "0.98rem" }}
         >
           {description}
         </div>
