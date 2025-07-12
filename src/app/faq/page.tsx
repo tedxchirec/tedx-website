@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "What if my registration details are incorrect?",
-    a: "Registrations are verified on-site. Any inaccurate information may lead to cancellation of your spot.",
+    a: "Registrations are verified on-site. Any inaccurate information may lead to cancellation of your spot.",
   },
 ];
 
@@ -212,12 +212,6 @@ export default function FAQPage() {
         ))}
       </div>
 
-      {/* Extra: subtle floating TEDx logo for visual interest */}
-      <div className="pointer-events-none select-none absolute left-1/2 bottom-8 md:bottom-16 -translate-x-1/2 z-0 opacity-10 md:opacity-15 animate-float-slow">
-        <span className="ibm-font text-5xl md:text-7xl font-extrabold text-red-500 drop-shadow-glow">
-          TEDx
-        </span>
-      </div>
       <style jsx global>{`
         .faq-title-interactive {
           filter: drop-shadow(0 0 8px #ef4444cc);
