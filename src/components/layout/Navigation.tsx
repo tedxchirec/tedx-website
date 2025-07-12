@@ -53,16 +53,16 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <span className="ibm-font text-2xl md:text-3xl transition-all duration-300 group-hover:scale-105">
-              <span className="font-bold text-red-500 group-hover:text-red-400 transition-colors">
+              <span className="font-bold text-red-500 group-hover:text-red-600 transition-colors duration-500">
                 TED
               </span>
               <span
-                className="font-bold text-red-500 relative mx-0.5"
+                className="font-bold text-red-500 relative mx-0.5 group-hover:text-red-600 transition-colors duration-500"
                 style={{ fontSize: "0.7em", top: "-0.6em" }}
               >
                 x
               </span>
-              <span className="font-regular text-white group-hover:text-gray-200 transition-colors">
+              <span className="font-regular text-grey-200 group-hover:text-white transition-colors duration-500">
                 Youth@CHIREC
               </span>
             </span>
