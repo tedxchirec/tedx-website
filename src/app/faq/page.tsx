@@ -150,7 +150,7 @@ export default function FAQPage() {
                 }}
               >
                 {open === idx && (
-                  <div className="animate-fade-in">
+                  <div className="animate-fade-in pt-5">
                     {faq.a}
                   </div>
                 )}
