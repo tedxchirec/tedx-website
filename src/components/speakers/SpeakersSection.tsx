@@ -28,7 +28,7 @@ const studentSpeakers = [
   },
   {
     description:
-      "Sara Kim is a young entrepreneur building tech for good and empowering her peers.",
+      "Rikith is a 12th grade CBSE student hoping to pursue economics and finance. When he’s not at an MUN strengthening his articulation skills and love for policy you’ll probably find him appealing to the umpire for a lbw that’s clearly not out! His friends call him an enthusiastic yapper- someone who can go on and on, about absolutely nothing. As a frequent baker he’s always trying to master intricate dishes which are bound to go south. His brownies are a school favourite! He is ecstatic to be part of the TedX team as a speaker and can’t wait till the day of the event!",
     image: "/speakers/student2.png",
   },
   {
