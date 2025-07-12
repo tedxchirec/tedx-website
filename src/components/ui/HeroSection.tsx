@@ -76,6 +76,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       }}
     >
       {/* Cliff as full-width SVG, anchored to bottom, no forced height */}
+      {/* Cliff SVG - force filter to black regardless of color scheme */}
       <Image
         src="/hero/cliff.svg"
         alt="Cliff"
@@ -92,11 +93,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           zIndex: 1,
           pointerEvents: "none",
           userSelect: "none",
+          filter: "brightness(0) invert(0)", // always black
         }}
         draggable="false"
         priority
       />
-      {/* Jumper - centered, as large as possible, never overlaps navbar or cliffs, position adapts to device size */}
+      {/* Jumper SVG - force filter to black regardless of color scheme */}
       <Image
         src="/hero/jump.svg"
         alt="Jumping silhouette hero"
@@ -114,6 +116,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           transition: "height 0.2s, bottom 0.2s",
           pointerEvents: "none",
           userSelect: "none",
+          filter: "brightness(0) invert(0)", // always black
         }}
         draggable="false"
         priority
