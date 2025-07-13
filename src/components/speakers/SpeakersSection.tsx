@@ -2,7 +2,6 @@ import React from "react";
 import SpeakerCard from "../ui/SpeakerCard";
 import AnimatedSection from "../ui/AnimatedSection";
 
-
 // Global styles for heading animation and glow
 function SpeakersSectionGlobalStyles() {
   return (
@@ -32,28 +31,28 @@ function SpeakersSectionGlobalStyles() {
   );
 }
 
-const guestSpeakers = [
-  {
-    description:
-      "Dr. Jane Smith is a world-renowned expert in innovation and technology, with over 20 years of experience leading global teams.",
-    image: "/speakers/guest1.png",
-  },
-  {
-    description:
-      "Prof. John Doe is a celebrated author and thought leader, inspiring audiences worldwide with his groundbreaking research.",
-    image: "/speakers/guest2.png",
-  },
-  {
-    description:
-      "Ms. Emily Lee is an industry leader, known for her transformative work in social entrepreneurship and impact.",
-    image: "/speakers/guest3.png",
-  },
-];
+// const guestSpeakers = [
+//   {
+//     description:
+//       "Dr. Jane Smith is a world-renowned expert in innovation and technology, with over 20 years of experience leading global teams.",
+//     image: "/speakers/guest1.png",
+//   },
+//   {
+//     description:
+//       "Prof. John Doe is a celebrated author and thought leader, inspiring audiences worldwide with his groundbreaking research.",
+//     image: "/speakers/guest2.png",
+//   },
+//   {
+//     description:
+//       "Ms. Emily Lee is an industry leader, known for her transformative work in social entrepreneurship and impact.",
+//     image: "/speakers/guest3.png",
+//   },
+// ];
 
 const studentSpeakers = [
   {
     description:
-      "Aarav Patel is an aspiring scientist passionate about climate solutions and youth advocacy.",
+      "Akhilesh Palakodeti is a Y2 IBDP student at CHIREC International School where he studies Math, Physics, and Economics. He is deeply passionate about history, politics and sociology. He is an avid reader of the Economist magazine, who enjoys high-tension discussions and varying perspectives. Akhilesh represented India as a member of the Indian Debate Squad in 2023 and is the winner and best novice speaker of the International Competition for Young Debaters hosted by the Cambridge Union. He thrives on critical questions, late-night discussions, and mildly alarming amounts of coffee.",
     image: "/speakers/student1.png",
   },
   {
@@ -78,7 +77,7 @@ const SpeakersSection: React.FC = () => (
     <SpeakersSectionGlobalStyles />
     <AnimatedSection className="relative z-10 pt-5 pb-6 px-6 md:px-12 bg-black/90">
       {/* Unique background for guest speakers */}
-      <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
+      {/* <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
       <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
       <div className="w-full flex flex-col items-center pb-8 md:pb-12">
         <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold text-red-500 mb-8 md:mb-12 leading-none relative z-10 faq-title-interactive text-center">
@@ -89,7 +88,6 @@ const SpeakersSection: React.FC = () => (
             </span>
           </span>
         </h2>
-        {/* ...existing code... */}
         <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
           {guestSpeakers.map((speaker, idx) => (
             <div
@@ -106,7 +104,7 @@ const SpeakersSection: React.FC = () => (
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* Unique background for student speakers */}
       <div className="absolute right-0 bottom-0 w-40 h-40 bg-gradient-to-tl from-red-500/20 to-transparent rounded-full blur-2xl -z-10" />
       <div className="absolute left-0 bottom-1/2 w-32 h-32 bg-red-400/10 rounded-full blur-2xl -z-10" />
