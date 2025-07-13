@@ -137,19 +137,84 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
 
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
         {/* Header */}
-        <h2 className="ibm-font text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 pt-8 md:pt-10">
-          About{" "}
-          <span className="font-extrabold text-red-500">
-            TED
-            <span
-              className="relative mx-0.5"
-              style={{ fontSize: "0.7em", top: "-0.6em" }}
-            >
-              x
+        <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 faq-title-interactive text-center">
+          <span className="heading-entity">
+            <span className="geist-font heading-main">About </span>
+            <span className="ibm-font heading-tedx">
+              TED
+              <span
+                className="relative mx-0.5 heading-x"
+                style={{ fontSize: "0.7em", top: "-0.45em" }}
+              >
+                x
+              </span>
             </span>
+            <span className="ibm-font heading-youth" style={{marginLeft: "-0.12em"}}>Youth@CHIREC</span>
           </span>
-          <span className="font-light">Youth@CHIREC</span>
+          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+            <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+          </span>
         </h2>
+        <style jsx global>{`
+          .faq-title-interactive {
+            color: #ef4444;
+            filter: drop-shadow(0 0 8px #ef4444cc);
+            transition: filter 0.3s, color 0.3s;
+          }
+          .faq-title-interactive:hover {
+            color: #fff;
+            filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
+          }
+          .heading-entity {
+            display: inline-flex;
+            gap: 0.2em;
+            align-items: center;
+          }
+          .heading-main {
+            color: #ef4444;
+            transition: color 0.3s;
+          }
+          .faq-title-interactive:hover .heading-main {
+            color: #fff;
+          }
+          .heading-tedx {
+            color: #ef4444;
+            font-weight: 700;
+            transition: color 0.3s;
+          }
+          .faq-title-interactive:hover .heading-tedx {
+            color: #fff;
+          }
+          .heading-x {
+            color: #ef4444;
+            font-weight: 700;
+            transition: color 0.3s;
+          }
+          .faq-title-interactive:hover .heading-x {
+            color: #fff;
+          }
+          .heading-youth {
+            color: #fff;
+            font-weight: 300;
+            transition: color 0.3s;
+          }
+          .faq-title-interactive:hover .heading-youth {
+            color: #ef4444;
+          }
+          .animate-title-pulse {
+            animation: titlePulse 2.5s ease-in-out infinite alternate;
+          }
+          @keyframes titlePulse {
+            0% {
+              opacity: 0.7;
+              transform: scale(1);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1.08);
+            }
+          }
+        `}</style>
 
         {/* Description */}
         <p className="inter-font text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">

@@ -123,7 +123,7 @@ export default function FAQPage() {
 
       {/* Animated FAQ Title */}
       <AnimatedSection delay={0}>
-        <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-red-500 mb-8 leading-none relative z-10 faq-title-interactive">
+        <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-red-500 mb-18 leading-none relative z-10 faq-title-interactive">
           <span className="relative inline-block">
             Frequently Asked Questions
             <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">

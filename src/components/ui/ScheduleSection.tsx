@@ -98,9 +98,37 @@ const ScheduleSection: React.FC = () => {
         ></div>
       </div>
 
-      <h2 className="ibm-font text-3xl md:text-5xl font-bold text-center mb-2">
-        Event Schedule
+      <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold text-red-500 mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 faq-title-interactive text-center">
+        <span className="relative inline-block">
+          Event Schedule
+          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+            <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+          </span>
+        </span>
       </h2>
+      <style jsx global>{`
+        .faq-title-interactive {
+          filter: drop-shadow(0 0 8px #ef4444cc);
+          transition: filter 0.3s, color 0.3s;
+        }
+        .faq-title-interactive:hover {
+          color: #fff;
+          filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
+        }
+        .animate-title-pulse {
+          animation: titlePulseGlow 2.5s ease-in-out infinite alternate;
+        }
+        @keyframes titlePulseGlow {
+          0% {
+            opacity: 0.7;
+            filter: blur(16px);
+          }
+          100% {
+            opacity: 1;
+            filter: blur(32px);
+          }
+        }
+      `}</style>
       <div className="inter-font text-lg md:text-xl text-gray-300 text-center mb-12">
         2nd August, 2025 • CHIREC ISRP Campus
       </div>

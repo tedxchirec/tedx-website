@@ -2,6 +2,36 @@ import React from "react";
 import SpeakerCard from "../ui/SpeakerCard";
 import AnimatedSection from "../ui/AnimatedSection";
 
+
+// Global styles for heading animation and glow
+function SpeakersSectionGlobalStyles() {
+  return (
+    <style jsx global>{`
+      .faq-title-interactive {
+        filter: drop-shadow(0 0 8px #ef4444cc);
+        transition: filter 0.3s, color 0.3s;
+      }
+      .faq-title-interactive:hover {
+        color: #fff;
+        filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
+      }
+      .animate-title-pulse {
+        animation: titlePulse 2.5s ease-in-out infinite alternate;
+      }
+      @keyframes titlePulse {
+        0% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1.08);
+        }
+      }
+    `}</style>
+  );
+}
+
 const guestSpeakers = [
   {
     description:
@@ -44,73 +74,87 @@ const studentSpeakers = [
 ];
 
 const SpeakersSection: React.FC = () => (
-  <AnimatedSection className="relative z-10 pt-5 pb-24 px-6 md:px-12 bg-black/90">
-    {/* Unique background for guest speakers */}
-    <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
-    <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
-    <div className="w-full flex flex-col items-center pb-8 md:pb-12">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-red-500 mb-8 md:mb-12 tracking-tight drop-shadow-lg text-center">
-        Guest Speakers
-      </h2>
-      <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
-        {guestSpeakers.map((speaker, idx) => (
-          <div
-            key={idx}
-            className="w-full max-w-[340px] aspect-[4/5] flex justify-center items-center"
-          >
-            <SpeakerCard
-              width="100%"
-              height="100%"
-              image={speaker.image}
-              description={speaker.description}
-              descriptionClassName="text-[15px] font-normal leading-snug px-2"
-            />
-          </div>
-        ))}
+  <>
+    <SpeakersSectionGlobalStyles />
+    <AnimatedSection className="relative z-10 pt-5 pb-24 px-6 md:px-12 bg-black/90">
+      {/* Unique background for guest speakers */}
+      <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
+      <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
+      <div className="w-full flex flex-col items-center pb-8 md:pb-12">
+        <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold text-red-500 mb-8 md:mb-12 leading-none relative z-10 faq-title-interactive text-center">
+          <span className="relative inline-block">
+            Guest Speakers
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+              <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+            </span>
+          </span>
+        </h2>
+        {/* ...existing code... */}
+        <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
+          {guestSpeakers.map((speaker, idx) => (
+            <div
+              key={idx}
+              className="w-full max-w-[340px] aspect-[4/5] flex justify-center items-center"
+            >
+              <SpeakerCard
+                width="100%"
+                height="100%"
+                image={speaker.image}
+                description={speaker.description}
+                descriptionClassName="text-[15px] font-normal leading-snug px-2"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-    {/* Unique background for student speakers */}
-    <div className="absolute right-0 bottom-0 w-40 h-40 bg-gradient-to-tl from-red-500/20 to-transparent rounded-full blur-2xl -z-10" />
-    <div className="absolute left-0 bottom-1/2 w-32 h-32 bg-red-400/10 rounded-full blur-2xl -z-10" />
-    <div className="w-full flex flex-col items-center pb-10 md:pb-16">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-red-500 mb-8 md:mb-12 tracking-tight drop-shadow-lg text-center">
-        Student Speakers
-      </h2>
-      <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
-        {studentSpeakers.map((speaker, idx) => (
-          <div
-            key={idx}
-            className="w-full max-w-[340px] aspect-[4/5] flex justify-center items-center"
-          >
-            <SpeakerCard
-              width="100%"
-              height="100%"
-              image={speaker.image}
-              description={speaker.description}
-              descriptionClassName="text-[0px] font-normal leading-snug px-2"
-            />
-          </div>
-        ))}
+      {/* Unique background for student speakers */}
+      <div className="absolute right-0 bottom-0 w-40 h-40 bg-gradient-to-tl from-red-500/20 to-transparent rounded-full blur-2xl -z-10" />
+      <div className="absolute left-0 bottom-1/2 w-32 h-32 bg-red-400/10 rounded-full blur-2xl -z-10" />
+      <div className="w-full flex flex-col items-center pb-10 md:pb-16">
+        <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold text-red-500 mb-8 md:mb-12 leading-none relative z-10 faq-title-interactive text-center">
+          <span className="relative inline-block">
+            Student Speakers
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+              <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+            </span>
+          </span>
+        </h2>
+        <div className="w-full flex flex-wrap justify-center gap-x-8 gap-y-12 px-2 md:px-8">
+          {studentSpeakers.map((speaker, idx) => (
+            <div
+              key={idx}
+              className="w-full max-w-[340px] aspect-[4/5] flex justify-center items-center"
+            >
+              <SpeakerCard
+                width="100%"
+                height="100%"
+                image={speaker.image}
+                description={speaker.description}
+                descriptionClassName="text-[0px] font-normal leading-snug px-2"
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-    <style jsx>{`
-      @media (max-width: 768px) {
-        section,
-        .animated-section {
-          padding-top: 2rem;
-          padding-bottom: 2rem;
+      <style jsx>{`
+        @media (max-width: 768px) {
+          section,
+          .animated-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+          }
+          .flex-wrap {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+          }
+          .max-w-5xl {
+            max-width: 100%;
+          }
         }
-        .flex-wrap {
-          flex-direction: column;
-          gap: 2rem;
-          align-items: center;
-        }
-        .max-w-5xl {
-          max-width: 100%;
-        }
-      }
-    `}</style>
-  </AnimatedSection>
+      `}</style>
+    </AnimatedSection>
+  </>
 );
 
 export default SpeakersSection;

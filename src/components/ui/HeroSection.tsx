@@ -127,85 +127,80 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full pt-10 md:pt-20 pb-8">
         {/* Title with arrows as part of the F glyph, matching the reference */}
         <h1
-          className="font-extrabold text-white text-center leading-[0.95] text-[2.7rem] md:text-6xl lg:text-7xl mb-4 drop-shadow-xl"
+          className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-white mb-18 leading-none relative z-10 fail-forward-title text-center mb-4"
           style={{ letterSpacing: "-0.01em", position: "relative" }}
         >
-          {/* First line: F with arrow as part of the glyph, true overlay */}
-          <span className="geist-font flex flex-row items-center justify-center gap-2">
-            <span
-              className="relative"
-              style={{ display: "inline-block", fontWeight: 900 }}
-            >
-              <span
-                style={{
-                  fontWeight: 900,
-                  fontFamily: "inherit",
-                  fontSize: "1em",
-                  position: "relative",
-                  display: "inline-block",
-                  lineHeight: 1,
-                }}
-              >
-                F
-                {/* Flatter triangle, base flush with F's top bar, width just wider than F's bar */}
-                <svg
-                  width="0.28em"
-                  height="0.6em"
-                  viewBox="0 0 2 20"
-                  style={{
-                    position: "absolute",
-                    left: "0.46em", // aligns base with F's top bar
-                    top: "0.04em", // fine-tune as needed
-                    pointerEvents: "none",
-                  }}
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polygon points="0,0 4,6 0,12" />
-                </svg>
+          <span className="relative inline-block">
+            {/* First line: F with arrow as part of the glyph, true overlay */}
+            <span className="geist-font flex flex-row items-center justify-center gap-2">
+              <span className="relative" style={{ display: "inline-block", fontWeight: 900 }}>
+                <span style={{ fontWeight: 900, fontFamily: "inherit", fontSize: "1em", position: "relative", display: "inline-block", lineHeight: 1 }}>
+                  F
+                  <svg width="0.28em" height="0.6em" viewBox="0 0 2 20" style={{ position: "absolute", left: "0.46em", top: "0.04em", pointerEvents: "none" }} fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="0,0 4,6 0,12" />
+                  </svg>
+                </span>
               </span>
+              <span>AIL</span>
             </span>
-            <span>AIL</span>
-          </span>
-          {/* Second line: F with arrow as part of the glyph, true overlay */}
-          <span className="geist-font flex flex-row items-center justify-center gap-2 mt-2">
-            <span
-              className="relative"
-              style={{ display: "inline-block", fontWeight: 900 }}
-            >
-              <span
-                style={{
-                  fontWeight: 900,
-                  fontFamily: "inherit",
-                  fontSize: "1em",
-                  position: "relative",
-                  display: "inline-block",
-                  lineHeight: 1,
-                }}
-              >
-                F
-                {/* Flatter triangle, base flush with F's top bar, width just wider than F's bar */}
-                <svg
-                  width="0.28em"
-                  height="0.6em"
-                  viewBox="0 0 2 20"
-                  style={{
-                    position: "absolute",
-                    left: "0.46em", // aligns base with F's top bar
-                    top: "0.04em", // fine-tune as needed
-                    pointerEvents: "none",
-                  }}
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polygon points="0,0 4,6 0,12" />
-                </svg>
+            {/* Second line: F with arrow as part of the glyph, true overlay */}
+            <span className="geist-font flex flex-row items-center justify-center gap-2 mt-2">
+              <span className="relative" style={{ display: "inline-block", fontWeight: 900 }}>
+                <span style={{ fontWeight: 900, fontFamily: "inherit", fontSize: "1em", position: "relative", display: "inline-block", lineHeight: 1 }}>
+                  F
+                  <svg width="0.28em" height="0.6em" viewBox="0 0 2 20" style={{ position: "absolute", left: "0.46em", top: "0.04em", pointerEvents: "none" }} fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="0,0 4,6 0,12" />
+                  </svg>
+                </span>
               </span>
+              <span>ORWARD</span>
+              <div className="flex w-full justify-center"></div>
             </span>
-            <span>ORWARD</span>
-            <div className="flex w-full justify-center"></div>
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+              <span className="block w-full h-full rounded-full bg-gradient-to-br from-white/20 via-red-400/10 to-white/0 blur-xl animate-title-pulse" />
+            </span>
           </span>
         </h1>
+        <style jsx global>{`
+          .fail-forward-title {
+            filter: drop-shadow(0 0 12px #fff8);
+            transition: filter 0.3s;
+          }
+          .fail-forward-title:hover {
+            filter: drop-shadow(0 0 32px #fff) brightness(1.2);
+          }
+          .animate-title-pulse {
+            animation: titlePulse 2.5s ease-in-out infinite alternate;
+          }
+          @keyframes titlePulse {
+            0% {
+              opacity: 0.7;
+              transform: scale(1);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1.08);
+            }
+          }
+          .hero-glass-card {
+            box-shadow: 0 4px 32px 0 #ef4444cc, 0 1.5px 8px 0 #fff2;
+            transition: box-shadow 0.3s, transform 0.3s;
+          }
+          .hero-glass-card:hover {
+            box-shadow: 0 8px 48px 0 #ef4444cc, 0 2px 12px 0 #fff4;
+            transform: scale(1.03);
+          }
+          .hero-glass-card * {
+            transition: color 0.3s, background 0.3s;
+          }
+          .animate-card-glow {
+            animation: cardGlow 2.5s ease-in-out infinite alternate;
+          }
+          @keyframes cardGlow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+          }
+        `}</style>
         {/* Details Section - interactive glass card, visually impactful */}
         <div className="mt-6 mb-10 w-full max-w-xl">
           <div className="hero-glass-card group relative rounded-2xl px-7 py-6 shadow-2xl flex flex-col items-center gap-3 border border-white/30 backdrop-blur-xl bg-gradient-to-br from-white/10 via-red-900/10 to-black/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-red-500/30 hover:border-red-500/40">
@@ -217,23 +212,21 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 Presented by
               </span>
               <span className="ibm-font flex flex-row items-center gap-0.5">
-                <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight group-hover:scale-110 transition-transform duration-300">
+                <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight" style={{ position: "relative" }}>
                   TED
-                </span>
-                <span
-                  className="text-red-500 font-extrabold text-lg md:text-xl align-super"
-                  style={{
-                    fontSize: "0.7em",
-                    top: "-0.6em",
-                    position: "relative",
-                    marginLeft: "-0.2em",
-                    marginRight: "-0.1em",
-                  }}
-                >
-                  x
-                </span>
-                <span className="text-white font-light text-lg md:text-xl group-hover:text-red-400 transition-colors duration-300">
-                  Youth@CHIREC
+                  <span
+                    className="text-red-500 font-extrabold text-lg md:text-xl"
+                    style={{
+                      fontSize: "0.7em",
+                      position: "relative",
+                      marginLeft: "0.1em",
+                      marginRight: "0.1em",
+                      top: "-0.45em"
+                    }}
+                  >
+                    x
+                  </span>
+                  <span className="text-white font-light text-lg md:text-xl">Youth@CHIREC</span>
                 </span>
               </span>
             </div>
@@ -247,18 +240,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
         </div>
-      <style jsx global>{`
-        .hero-glass-card {
-          box-shadow: 0 4px 32px 0 #ef4444cc, 0 1.5px 8px 0 #fff2;
-        }
-        .animate-card-glow {
-          animation: cardGlow 2.5s ease-in-out infinite alternate;
-        }
-        @keyframes cardGlow {
-          0% { opacity: 0.5; }
-          100% { opacity: 1; }
-        }
-      `}</style>
         <button
           onClick={handleCtaClick}
           className="inter-font font-medium border-2 border-red-500 text-white hover:bg-red-500 hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-md"

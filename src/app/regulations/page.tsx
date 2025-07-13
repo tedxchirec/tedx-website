@@ -36,9 +36,37 @@ export default function RegulationsPage() {
         />
       </div>
       <div className="w-full max-w-3xl mx-auto text-center relative z-10">
-        <h1 className="geist-font text-3xl md:text-5xl font-bold text-red-500 mb-8 drop-shadow-lg">
-          Attendee Rules and Regulations
+        <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-red-500 mb-18 leading-none relative z-10 faq-title-interactive text-center mb-8">
+          <span className="relative inline-block">
+            Attendee Rules and Regulations
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+              <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+            </span>
+          </span>
         </h1>
+        <style jsx global>{`
+          .faq-title-interactive {
+            filter: drop-shadow(0 0 8px #ef4444cc);
+            transition: filter 0.3s, color 0.3s;
+          }
+          .faq-title-interactive:hover {
+            color: #fff;
+            filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
+          }
+          .animate-title-pulse {
+            animation: titlePulse 2.5s ease-in-out infinite alternate;
+          }
+          @keyframes titlePulse {
+            0% {
+              opacity: 0.7;
+              transform: scale(1);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1.08);
+            }
+          }
+        `}</style>
         <div className="bg-[#18181c]/80 rounded-2xl shadow-2xl border border-white/10 p-6 md:p-10 text-left text-gray-200 backdrop-blur-md">
           <h2 className="ibm-font text-xl md:text-2xl font-bold text-white mb-4">
             Registration

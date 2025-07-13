@@ -43,19 +43,97 @@ export default function MeetTheTeamPage() {
         <div className="hidden md:block absolute bottom-6 md:bottom-12 left-1/4 w-5 md:w-8 h-5 md:h-8 bg-red-400/7 rounded-lg rotate-45 animate-pulse [animation-delay:2.5s]"></div>
         <div className="hidden md:block absolute bottom-10 md:bottom-20 right-1/4 w-6 md:w-10 h-6 md:h-10 bg-white/3 rounded-full animate-float [animation-delay:4s]"></div>
       </div>
-      <h1 className="ibm-font text-4xl md:text-6xl font-bold text-center text-white pt-32 md:pt-40 mb-12 md:mb-20 z-10">
-        Meet the{" "}
-        <span className="text-red-500">
-          TED
-          <span
-            className="relative mx-0.5"
-            style={{ fontSize: "0.7em", top: "-0.6em" }}
-          >
-            x
+      <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold mb-18 leading-none relative z-10 faq-title-interactive text-center pt-32 md:pt-40 mb-12 md:mb-20">
+        <span className="heading-entity">
+          <span className="geist-font heading-main">Meet the </span>
+          <span className="ibm-font heading-tedx">
+            TED
+            <span
+              className="relative mx-0.5 heading-x"
+              style={{
+                fontSize: "0.7em",
+                top: "-0.45em",
+              }}
+            >
+              x
+            </span>
           </span>
+          <span className="ibm-font heading-youth" style={{marginLeft: "-0.12em"}}>Youth@CHIREC</span>
+          <span className="geist-font heading-main"> Team</span>
         </span>
-        <span className="font-light">Youth@CHIREC</span> Team
+        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+          <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+        </span>
       </h1>
+      <style jsx global>{`
+        }
+        @keyframes tedxUnderlineGlow {
+          0% {
+            opacity: 0.5;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        .faq-title-interactive {
+          color: #ef4444;
+          filter: drop-shadow(0 0 8px #ef4444cc);
+          transition: filter 0.3s, color 0.3s;
+        }
+        .faq-title-interactive:hover {
+          color: #fff;
+          filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
+        }
+        .heading-entity {
+          display: inline-flex;
+          gap: 0.2em;
+          align-items: center;
+        }
+        .heading-main {
+          color: #ef4444;
+          transition: color 0.3s;
+        }
+        .faq-title-interactive:hover .heading-main {
+          color: #fff;
+        }
+        .heading-tedx {
+          color: #ef4444;
+          font-weight: 700;
+          transition: color 0.3s;
+        }
+        .faq-title-interactive:hover .heading-tedx {
+          color: #fff;
+        }
+        .heading-x {
+          color: #ef4444;
+          font-weight: 700;
+          transition: color 0.3s;
+        }
+        .faq-title-interactive:hover .heading-x {
+          color: #fff;
+        }
+        .heading-youth {
+          color: #fff;
+          font-weight: 300;
+          transition: color 0.3s;
+        }
+        .faq-title-interactive:hover .heading-youth {
+          color: #ef4444;
+        }
+        .animate-title-pulse {
+          animation: titlePulse 2.5s ease-in-out infinite alternate;
+        }
+        @keyframes titlePulse {
+          0% {
+            opacity: 0.7;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1.08);
+          }
+        }
+      `}</style>
       <div className="w-full flex flex-col gap-20 pb-16 md:pb-24">
         {departments.map((dept: string, idx: number) => {
           const members = teamData.filter(
@@ -68,10 +146,14 @@ export default function MeetTheTeamPage() {
               delay={0.1 * idx}
             >
               <h2 className="ibm-font text-2xl md:text-4xl font-bold text-center mb-19 text-red-500">
-                {dept}
+                <span className="faq-title-interactive relative inline-block">
+                  {dept}
+                  <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+                    <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
+                  </span>
+                </span>
               </h2>
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 w-full px-2 md:px-8">
-
                 {members.map((member: TeamMember) => (
                   <div
                     key={member.Name}
