@@ -112,8 +112,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
   return (
     <AnimatedSection
       className={`flex items-center justify-center px-4 md:px-12 relative ${className}`}
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "60vh" }}
     >
+      {/* need to change this back to 100vh if you ever add image section again */}
       {/* Subtle Abstract Shapes on the sides */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Left side shapes */}
@@ -140,16 +141,29 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 faq-title-interactive text-center">
           <span className="heading-entity about-heading-responsive">
             <span className="geist-font heading-main">About </span>
-            <span className="ibm-font heading-tedx" style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <span
+              className="ibm-font heading-tedx"
+              style={{ display: "inline-flex", alignItems: "center" }}
+            >
               TED
               <span
                 className="relative heading-x"
-                style={{ fontSize: "0.7em", top: "-0.45em", marginLeft: '-0.08em', marginRight: '-0.08em' }}
+                style={{
+                  fontSize: "0.7em",
+                  top: "-0.45em",
+                  marginLeft: "-0.08em",
+                  marginRight: "-0.08em",
+                }}
               >
                 x
               </span>
             </span>
-            <span className="ibm-font heading-youth" style={{ marginLeft: '-0.12em' }}>Youth@CHIREC</span>
+            <span
+              className="ibm-font heading-youth"
+              style={{ marginLeft: "-0.12em" }}
+            >
+              Youth@CHIREC
+            </span>
           </span>
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
             <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
@@ -245,7 +259,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         </p>
 
         {/* Stats in a row for the new format */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12 pb-0">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -270,10 +284,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         </div>
 
         {/* Image Section */}
-        <div className="mb-8 md:mb-12">
+        {/* <div className="mb-8 md:mb-12">
           <div className="relative max-w-xs md:max-w-md mx-auto">
             <div className="relative overflow-hidden rounded-2xl border-2 border-red-500 shadow-2xl group">
-              {/* Image placeholder with TEDx branding */}
               <div className="w-full h-56 md:h-80 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                 <div className="text-center p-6 md:p-8">
                   <div className="text-2xl md:text-4xl font-bold text-red-500 mb-2 md:mb-3">
@@ -296,15 +309,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
                   </div>
                 </div>
               </div>
-              {/* Image overlay for better integration */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-60"></div>
             </div>
 
-            {/* Decorative elements around the image */}
             <div className="absolute -top-2 -right-2 w-10 md:w-16 h-10 md:h-16 bg-red-500/20 rounded-full blur-xl animate-pulse"></div>
             <div className="absolute -bottom-2 -left-2 w-12 md:w-20 h-12 md:h-20 bg-red-500/10 rounded-full blur-2xl"></div>
           </div>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
       </div>
