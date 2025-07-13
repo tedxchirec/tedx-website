@@ -165,18 +165,22 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center group cursor-pointer select-none transition-all duration-300 rounded-xl hover:bg-[#18181c] hover:shadow-xl hover:scale-105 focus-within:scale-105 focus-within:shadow-xl flex flex-col items-center justify-between h-full min-h-[9.5rem] md:min-h-[12rem] py-2"
+              className="stat-card text-center group cursor-pointer select-none transition-all duration-300 rounded-xl flex flex-col items-center justify-between h-full min-h-[9.5rem] md:min-h-[12rem] py-2 hover:ring-2 hover:ring-red-500 focus-within:ring-2 focus-within:ring-red-500 hover:shadow-lg hover:-translate-y-2 focus-within:shadow-lg focus-within:-translate-y-2"
               tabIndex={0}
             >
-              <div className="geist-font text-2xl md:text-4xl font-bold text-red-500 mb-1 md:mb-2 transition-colors duration-300 group-hover:text-red-400 group-focus-within:text-red-400">
-                {stat.number}
-              </div>
-              <div className="geist-font text-xs md:text-base font-semibold text-white mb-2 md:mb-3 min-h-[2.8em] md:min-h-[3.2em] flex items-center justify-center transition-colors duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200 text-center w-full">
-                {stat.title}
-              </div>
-              <div className="flex justify-center items-end h-8 md:h-8 w-8 md:w-8 opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
-                {stat.icon}
-              </div>
+              {" "}
+              <div className="geist-font text-2xl md:text-4xl font-medium text-red-500 mb-1 md:mb-2 transition-all duration-300 group-hover:font-bold group-focus-within:font-bold">
+                {" "}
+                {stat.number}{" "}
+              </div>{" "}
+              <div className="geist-font text-xs md:text-base font-medium text-white mb-2 md:mb-3 min-h-[2.8em] md:min-h-[3.2em] flex items-center justify-center transition-all duration-300 group-hover:text-gray-200 group-focus-within:text-gray-200 text-center w-full group-hover:font-bold group-focus-within:font-bold">
+                {" "}
+                {stat.title}{" "}
+              </div>{" "}
+              <div className="flex justify-center items-end h-8 md:h-8 w-8 md:w-8 opacity-80 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-300 group-hover:scale-105 group-focus-within:scale-105">
+                {" "}
+                {stat.icon}{" "}
+              </div>{" "}
             </div>
           ))}
         </div>
@@ -219,20 +223,6 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         </div>
 
         {/* Call to Action */}
-        <button
-          className="inter-font bg-red-500 hover:bg-red-600 text-white px-5 md:px-6 lg:px-7 py-2.5 md:py-3 lg:py-3.5 rounded-full text-base  font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 max-w-xs md:max-w-sm mx-auto md:text-base lg:text-lg"
-          style={{
-            minWidth: "unset",
-            fontSize: "1rem",
-            paddingLeft: "1.5rem",
-            paddingRight: "1.5rem",
-            paddingTop: "0.75rem",
-            paddingBottom: "0.75rem",
-            marginBottom: "1.5rem",
-          }}
-        >
-          Book Now
-        </button>
       </div>
     </AnimatedSection>
   );

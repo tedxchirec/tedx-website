@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "What if my registration details are incorrect?",
-    a: "Registrations are verified on-site. Any inaccurate information may lead to cancellation of your spot.",
+    a: "Registrations are verified on-site. Any inaccurate information may lead to cancellation of your spot.",
   },
 ];
 
@@ -67,22 +67,58 @@ export default function FAQPage() {
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Left side */}
         <div className="hidden md:block absolute left-0 top-10 w-24 h-24 bg-gradient-to-br from-red-500/30 to-white/0 rounded-full blur-2xl animate-pulse" />
-        <div className="hidden md:block absolute left-0 top-1/3 w-16 h-16 bg-red-400/20 rounded-full blur-xl animate-float" style={{ animationDelay: '0.6s' }} />
-        <div className="hidden md:block absolute left-0 top-2/3 w-28 h-28 bg-white/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.2s' }} />
-        <div className="hidden md:block absolute left-0 bottom-10 w-20 h-20 bg-red-500/10 rounded-full blur-xl animate-float" style={{ animationDelay: '1.8s' }} />
+        <div
+          className="hidden md:block absolute left-0 top-1/3 w-16 h-16 bg-red-400/20 rounded-full blur-xl animate-float"
+          style={{ animationDelay: "0.6s" }}
+        />
+        <div
+          className="hidden md:block absolute left-0 top-2/3 w-28 h-28 bg-white/10 rounded-full blur-2xl animate-pulse"
+          style={{ animationDelay: "1.2s" }}
+        />
+        <div
+          className="hidden md:block absolute left-0 bottom-10 w-20 h-20 bg-red-500/10 rounded-full blur-xl animate-float"
+          style={{ animationDelay: "1.8s" }}
+        />
         {/* Right side */}
         <div className="hidden md:block absolute right-0 top-20 w-28 h-28 bg-gradient-to-tl from-red-400/20 to-white/0 rounded-full blur-2xl animate-pulse" />
-        <div className="hidden md:block absolute right-0 top-1/2 w-16 h-16 bg-white/10 rounded-full blur-xl animate-float" style={{ animationDelay: '0.9s', transform: 'translateY(-50%)' }} />
-        <div className="hidden md:block absolute right-0 top-3/4 w-24 h-24 bg-red-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1.5s' }} />
-        <div className="hidden md:block absolute right-0 bottom-8 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2.1s' }} />
+        <div
+          className="hidden md:block absolute right-0 top-1/2 w-16 h-16 bg-white/10 rounded-full blur-xl animate-float"
+          style={{ animationDelay: "0.9s", transform: "translateY(-50%)" }}
+        />
+        <div
+          className="hidden md:block absolute right-0 top-3/4 w-24 h-24 bg-red-300/10 rounded-full blur-2xl animate-pulse"
+          style={{ animationDelay: "1.5s" }}
+        />
+        <div
+          className="hidden md:block absolute right-0 bottom-8 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float"
+          style={{ animationDelay: "2.1s" }}
+        />
         {/* Corners for extra fill */}
-        <div className="hidden md:block absolute left-8 top-8 w-10 h-10 bg-red-500/10 rounded-full blur-lg animate-bounce" style={{ animationDelay: '1.3s' }} />
-        <div className="hidden md:block absolute right-8 bottom-8 w-10 h-10 bg-red-400/10 rounded-full blur-lg animate-bounce" style={{ animationDelay: '1.7s' }} />
+        <div
+          className="hidden md:block absolute left-8 top-8 w-10 h-10 bg-red-500/10 rounded-full blur-lg animate-bounce"
+          style={{ animationDelay: "1.3s" }}
+        />
+        <div
+          className="hidden md:block absolute right-8 bottom-8 w-10 h-10 bg-red-400/10 rounded-full blur-lg animate-bounce"
+          style={{ animationDelay: "1.7s" }}
+        />
         {/* Mobile */}
-        <div className="md:hidden absolute left-2 top-1/5 w-12 h-12 bg-red-400/20 rounded-full blur-lg animate-float" style={{ animationDelay: '0.5s' }} />
-        <div className="md:hidden absolute left-2 bottom-1/5 w-10 h-10 bg-red-500/10 rounded-full blur-md animate-pulse" style={{ animationDelay: '1.2s' }} />
-        <div className="md:hidden absolute right-2 top-1/4 w-12 h-12 bg-white/10 rounded-full blur-lg animate-float" style={{ animationDelay: '1.1s' }} />
-        <div className="md:hidden absolute right-2 bottom-1/4 w-10 h-10 bg-red-300/10 rounded-full blur-md animate-pulse" style={{ animationDelay: '1.8s' }} />
+        <div
+          className="md:hidden absolute left-2 top-1/5 w-12 h-12 bg-red-400/20 rounded-full blur-lg animate-float"
+          style={{ animationDelay: "0.5s" }}
+        />
+        <div
+          className="md:hidden absolute left-2 bottom-1/5 w-10 h-10 bg-red-500/10 rounded-full blur-md animate-pulse"
+          style={{ animationDelay: "1.2s" }}
+        />
+        <div
+          className="md:hidden absolute right-2 top-1/4 w-12 h-12 bg-white/10 rounded-full blur-lg animate-float"
+          style={{ animationDelay: "1.1s" }}
+        />
+        <div
+          className="md:hidden absolute right-2 bottom-1/4 w-10 h-10 bg-red-300/10 rounded-full blur-md animate-pulse"
+          style={{ animationDelay: "1.8s" }}
+        />
       </div>
 
       {/* Animated FAQ Title */}
@@ -107,14 +143,18 @@ export default function FAQPage() {
           >
             <div
               className={`group mb-0 rounded-2xl bg-gradient-to-br from-white/10 to-red-900/10 border border-white/20 shadow-xl overflow-hidden transition-all duration-300
-                ${open === idx ? "scale-[1.025] shadow-2xl border-red-400/40" : "hover:scale-[1.01] hover:shadow-lg"}
+                ${
+                  open === idx
+                    ? "scale-[1.025] shadow-2xl border-red-400/40"
+                    : "hover:scale-[1.01] hover:shadow-lg"
+                }
               `}
               // Make the hover effect apply to the whole card, including the answer area
-              onMouseEnter={e => {
-                e.currentTarget.classList.add('card-hovered');
+              onMouseEnter={(e) => {
+                e.currentTarget.classList.add("card-hovered");
               }}
-              onMouseLeave={e => {
-                e.currentTarget.classList.remove('card-hovered');
+              onMouseLeave={(e) => {
+                e.currentTarget.classList.remove("card-hovered");
               }}
             >
               <button
@@ -129,41 +169,49 @@ export default function FAQPage() {
                   {faq.q}
                 </span>
                 <svg
-                  className={`w-6 h-6 text-red-500 transform transition-transform duration-300 ${open === idx ? "rotate-180" : ""}`}
+                  className={`w-6 h-6 text-red-500 transform transition-transform duration-300 ${
+                    open === idx ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <div
                 id={`faq-panel-${idx}`}
-                className={`px-6 pb-5 text-base md:text-lg text-gray-200 transition-all duration-300
-                  ${open === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0 card-hovered:bg-white/5"}
-                  overflow-hidden
-                `}
+                className={`px-6 text-base md:text-lg text-gray-200 transition-all duration-500 ${
+                  open === idx
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0 card-hovered:bg-white/5"
+                } overflow-hidden `}
                 style={{
-                  transitionProperty: 'max-height, opacity',
+                  transitionProperty: "max-height, opacity, padding-bottom",
+                  paddingBottom: open === idx ? "1.25rem" : "0rem",
                 }}
               >
-                {open === idx && (
-                  <div className="animate-fade-in pt-5">
-                    {faq.a}
-                  </div>
-                )}
+                {" "}
+                <div
+                  className={`text-[0.94rem] inter-font font-regular pt-5 ${
+                    open === idx ? "animate-fade-in" : ""
+                  }`}
+                >
+                  {" "}
+                  {faq.a}{" "}
+                </div>{" "}
               </div>
             </div>
           </AnimatedSection>
         ))}
       </div>
 
-      {/* Extra: subtle floating TEDx logo for visual interest */}
-      <div className="pointer-events-none select-none absolute left-1/2 bottom-8 md:bottom-16 -translate-x-1/2 z-0 opacity-10 md:opacity-15 animate-float-slow">
-        <span className="ibm-font text-5xl md:text-7xl font-extrabold text-red-500 drop-shadow-glow">TEDx</span>
-      </div>
       <style jsx global>{`
         .faq-title-interactive {
           filter: drop-shadow(0 0 8px #ef4444cc);
@@ -177,29 +225,46 @@ export default function FAQPage() {
           animation: titlePulse 2.5s ease-in-out infinite alternate;
         }
         @keyframes titlePulse {
-          0% { opacity: 0.7; transform: scale(1); }
-          100% { opacity: 1; transform: scale(1.08); }
+          0% {
+            opacity: 0.7;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1.08);
+          }
         }
         .card-hovered,
         .card-hovered .card-hovered:bg-white\/5 {
-          background-color: rgba(255,255,255,0.05) !important;
+          background-color: rgba(255, 255, 255, 0.05) !important;
         }
         .card-hovered .card-hovered:text-red-500 {
           color: #ef4444 !important;
         }
         .animate-fade-in {
-          animation: fadeIn 0.5s cubic-bezier(.4,0,.2,1);
+          animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(16px);}
-          to { opacity: 1; transform: none;}
+          from {
+            opacity: 0;
+            transform: translateY(16px);
+          }
+          to {
+            opacity: 1;
+            transform: none;
+          }
         }
         .animate-float-slow {
           animation: float 8s ease-in-out infinite;
         }
         @keyframes float {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-18px) scale(1.03);}
+          0%,
+          100% {
+            transform: translateY(0) scale(1);
+          }
+          50% {
+            transform: translateY(-18px) scale(1.03);
+          }
         }
       `}</style>
     </div>

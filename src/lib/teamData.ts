@@ -59,7 +59,7 @@ As Head of Communication Mahima is eager to bring her energy, organisational ski
   {
     Name: "Aakash Gupta",
     Department: "Head Of Logistics",
-    Description: `Aakash Gupta is an IB DP2 student at Chirec International School, taking Economics, Math AA and Business Management at higher level. He’s drawn to the world of business, especially where numbers meet strategy, and is keen on pursuing a career in finance.
+    Description: `Aakash Gupta is an IB DP2 student at CHIREC International School, taking Economics, Math AA and Business Management at higher level. He’s drawn to the world of business, especially where numbers meet strategy, and is keen on pursuing a career in finance.
 He starts most days by reading the news and keeping up with politics and ends them either listening to Bollywood music or watching a few too many episodes of Modern Family. He enjoys overanalyzing headlines, debating hot takes, and pretending he’s in a panel discussion every time a political debate comes on. TEDx, for him, is a chance to be around ideas that actually make you think, and maybe even leave you speechless for once.`,
     DeptOrder: 3,
     image: "7.png",
@@ -89,7 +89,7 @@ When she’s not working on The Prosperity Initiative or her research paper, you
   {
     Name: "Eeshan Jami",
     Department: "Head Of Finance and Sponsorships",
-    Description: `Eeshan Jami is a Grade 12 student at Chirec International School with a strong passion for finance, marketing, business, and the stock market. He thrives at the intersection of strategy and creativity—whether it’s analyzing trends, building brands, or exploring new market opportunities.
+    Description: `Eeshan Jami is a Grade 12 student at CHIREC International School with a strong passion for finance, marketing, business, and the stock market. He thrives at the intersection of strategy and creativity—whether it’s analyzing trends, building brands, or exploring new market opportunities.
 Eeshan loves connecting with people and exchanging ideas that lead to growth. Through his venture, Jami and Corp, he’s worked with brands across industries, bringing data-driven impact to every project. For him, curiosity, conversation, and consistency are the keys to progress.`,
     DeptOrder: 4,
     image: "11.png",
@@ -114,7 +114,7 @@ From being part of the Technology department of The Erudite, to sharing stories 
   {
     Name: "Mukti Bhatia",
     Department: "Head Of Marketing",
-    Description: `Mukti Bhatia is an IBDP 2 student at Chirec International School taking Business Management, English Language and Literature and Economics at Higher Level. Interested in learning about the ropes of engagement and algorithms, she wants to take up Marketing in the future.
+    Description: `Mukti Bhatia is an IBDP 2 student at CHIREC International School taking Business Management, English Language and Literature and Economics at Higher Level. Interested in learning about the ropes of engagement and algorithms, she wants to take up Marketing in the future.
 
 Apart from her passion for making Canva cry and creating reels she hopes go viral, Mukti has also trained in western classical music for 2 years and started singing at the age of 5. From music to media, she believes in crafting memorable experiences whether be through performances or posts. A TEDx Speaker herself, she is ecstatic about being behind the scenes this time, to market those ideas that are truly worth spreading.`,
     DeptOrder: 5,
@@ -139,7 +139,7 @@ As the Marketing Head for this year’s TEDx, she’s excited to bring bold idea
   {
     Name: "Anwitha Srivastsa",
     Department: "Head Of Design",
-    Description: `Anwitha Srivatsa is an IB DP2 student at Chirec International School, taking Global Politics, Language & Literature, and Economics at higher level. Though still contemplating her future path, Anwitha has aspired to pursue a career in Law and Journalism since she was eight.
+    Description: `Anwitha Srivatsa is an IB DP2 student at CHIREC International School, taking Global Politics, Language & Literature, and Economics at higher level. Though still contemplating her future path, Anwitha has aspired to pursue a career in Law and Journalism since she was eight.
 Passionate about history—especially the Vietnam War—she never misses an opportunity to discuss the intricacies of politics and diplomacy. When she’s not working on PadSeva, you’ll find her dancing, making to-do lists, pestering her favorite teachers, or drinking coffee. Above all, Anwi is the go-to person when you need someone to talk to—because she loves talking just as much.`,
     DeptOrder: 6,
     image: "17.png",
