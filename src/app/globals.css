@@ -13,8 +13,19 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.ibm-font {
+  font-family: var(--font-ibm-plex-sans);
+}
+.inter-font {
+  font-family: var(--font-inter);
+}
+.geist-font {
+  font-family: var(--font-geist);
+}
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
