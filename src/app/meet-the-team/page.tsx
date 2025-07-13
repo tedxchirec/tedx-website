@@ -43,7 +43,7 @@ export default function MeetTheTeamPage() {
         <div className="hidden md:block absolute bottom-6 md:bottom-12 left-1/4 w-5 md:w-8 h-5 md:h-8 bg-red-400/7 rounded-lg rotate-45 animate-pulse [animation-delay:2.5s]"></div>
         <div className="hidden md:block absolute bottom-10 md:bottom-20 right-1/4 w-6 md:w-10 h-6 md:h-10 bg-white/3 rounded-full animate-float [animation-delay:4s]"></div>
       </div>
-      <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold mb-18 leading-none relative z-10 faq-title-interactive text-center pt-32 md:pt-40 mb-12 md:mb-20">
+      <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold mb-18 leading-none relative z-10 faq-title-interactive text-center pt-32 md:pt-40 md:mb-20">
         <span className="heading-entity meet-team-heading-responsive">
           <span className="geist-font heading-main">Meet the </span>
           <span className="ibm-font heading-tedx" style={{ display: 'inline-flex', alignItems: 'center' }}>

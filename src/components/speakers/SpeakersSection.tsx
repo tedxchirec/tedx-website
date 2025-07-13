@@ -76,7 +76,7 @@ const studentSpeakers = [
 const SpeakersSection: React.FC = () => (
   <>
     <SpeakersSectionGlobalStyles />
-    <AnimatedSection className="relative z-10 pt-5 pb-24 px-6 md:px-12 bg-black/90">
+    <AnimatedSection className="relative z-10 pt-5 pb-6 px-6 md:px-12 bg-black/90">
       {/* Unique background for guest speakers */}
       <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
       <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
