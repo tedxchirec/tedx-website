@@ -130,7 +130,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full pt-10 md:pt-20 pb-8">
         {/* Title with arrows as part of the F glyph, matching the reference */}
         <h1
-          className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-white mb-18 leading-none relative z-10 fail-forward-title text-center mb-4"
+          className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-white mb-18 leading-none relative z-10 fail-forward-title text-center"
           style={{ letterSpacing: "-0.01em", position: "relative" }}
         >
           <span className="relative inline-block">

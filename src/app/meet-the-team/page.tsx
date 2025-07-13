@@ -15,7 +15,7 @@ const departments: string[] = Array.from(
 
 export default function MeetTheTeamPage() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-start bg-black">
+    <div className="relative min-h-screen flex flex-col items-center justify-start bg-black overflow-x-hidden">
       {/* Subtle Abstract Shapes on the sides */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Centered and mobile-friendly shapes */}
