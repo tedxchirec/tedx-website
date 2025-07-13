@@ -75,30 +75,31 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         overflow: "visible",
       }}
     >
-      {/* Cliff as full-width SVG, anchored to bottom, no forced height */}
-      {/* Cliff SVG - force filter to black regardless of color scheme */}
-      <Image
-        src="/hero/cliff.svg"
-        alt="Cliff"
-        className="absolute left-0 bottom-0"
-        width={1920}
-        height={400}
-        style={{
-          width: "100vw",
-          height: "auto",
-          minHeight: 0,
-          maxHeight: "none",
-          objectFit: "contain",
-          objectPosition: "bottom",
-          zIndex: 1,
-          pointerEvents: "none",
-          userSelect: "none",
-          filter: "brightness(0) invert(0)", // always black
-        }}
-        draggable="false"
-        priority
-      />
-      {/* Jumper SVG - force filter to black regardless of color scheme */}
+      {/* Cliff SVG - hidden on mobile */}
+      <div className="hidden md:block">
+        <Image
+          src="/hero/cliff.svg"
+          alt="Cliff"
+          className="absolute left-0 bottom-0"
+          width={1920}
+          height={400}
+          style={{
+            width: "100vw",
+            height: "auto",
+            minHeight: 0,
+            maxHeight: "none",
+            objectFit: "contain",
+            objectPosition: "bottom",
+            zIndex: 1,
+            pointerEvents: "none",
+            userSelect: "none",
+            filter: "brightness(0) invert(0)", // always black
+          }}
+          draggable="false"
+          priority
+        />
+      </div>
+      {/* Jumper SVG - even larger on mobile */}
       <Image
         src="/hero/jump.svg"
         alt="Jumping silhouette hero"
@@ -107,7 +108,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         height={800}
         style={{
           width: "auto",
-          height: jumperHeight,
+          height: typeof window !== 'undefined' && window.innerWidth < 768 ? jumperHeight * 1.35 : jumperHeight,
           maxHeight: JUMPER_MAX_HEIGHT,
           minHeight: JUMPER_MIN_HEIGHT,
           transform: "translateX(-50%)",
@@ -205,42 +206,59 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="flex w-full justify-center"></div>
           </span>
         </h1>
-        {/* Details Section - modern card style, tighter TEDx spacing */}
-        <div className="mt-6 mb-10 bg-white/10 rounded-2xl px-6 py-5 shadow-lg flex flex-col items-center gap-2 w-full max-w-xl border border-white/20 backdrop-blur-sm">
-          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2">
-            <span className="inter-font text-white text-lg md:text-xl font-medium">
-              Presented by
-            </span>
-            <span className="ibm-font flex flex-row items-center gap-0.5">
-              <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight">
-                TED
+        {/* Details Section - interactive glass card, visually impactful */}
+        <div className="mt-6 mb-10 w-full max-w-xl">
+          <div className="hero-glass-card group relative rounded-2xl px-7 py-6 shadow-2xl flex flex-col items-center gap-3 border border-white/30 backdrop-blur-xl bg-gradient-to-br from-white/10 via-red-900/10 to-black/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-red-500/30 hover:border-red-500/40">
+            <div className="absolute -inset-1 rounded-2xl pointer-events-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-full h-full rounded-2xl bg-gradient-to-br from-red-500/10 via-white/5 to-black/10 blur-lg animate-card-glow"></div>
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2 z-10">
+              <span className="inter-font text-white text-lg md:text-xl font-medium">
+                Presented by
               </span>
-              <span
-                className="text-red-500 font-extrabold text-lg md:text-xl align-super"
-                style={{
-                  fontSize: "0.7em",
-                  top: "-0.6em",
-                  position: "relative",
-                  marginLeft: "-0.2em",
-                  marginRight: "-0.1em",
-                }}
-              >
-                x
+              <span className="ibm-font flex flex-row items-center gap-0.5">
+                <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight group-hover:scale-110 transition-transform duration-300">
+                  TED
+                </span>
+                <span
+                  className="text-red-500 font-extrabold text-lg md:text-xl align-super"
+                  style={{
+                    fontSize: "0.7em",
+                    top: "-0.6em",
+                    position: "relative",
+                    marginLeft: "-0.2em",
+                    marginRight: "-0.1em",
+                  }}
+                >
+                  x
+                </span>
+                <span className="text-white font-light text-lg md:text-xl group-hover:text-red-400 transition-colors duration-300">
+                  Youth@CHIREC
+                </span>
               </span>
-              <span className="text-white font-light text-lg md:text-xl">
-                Youth@CHIREC
+            </div>
+            <div className="inter-font flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2 z-10">
+              <span className="text-white font-bold text-base md:text-lg group-hover:text-red-400 transition-colors duration-300">
+                2nd August, 2025
               </span>
-            </span>
-          </div>
-          <div className="inter-font flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-2">
-            <span className="text-white font-bold text-base md:text-lg">
-              2nd August, 2025
-            </span>
-            <span className="text-red-400 text-xs md:text-base font-medium">
-              CHIREC International School, Serilingampally
-            </span>
+              <span className="text-red-400 text-xs md:text-base font-medium group-hover:text-white transition-colors duration-300">
+                CHIREC International School, Serilingampally
+              </span>
+            </div>
           </div>
         </div>
+      <style jsx global>{`
+        .hero-glass-card {
+          box-shadow: 0 4px 32px 0 #ef4444cc, 0 1.5px 8px 0 #fff2;
+        }
+        .animate-card-glow {
+          animation: cardGlow 2.5s ease-in-out infinite alternate;
+        }
+        @keyframes cardGlow {
+          0% { opacity: 0.5; }
+          100% { opacity: 1; }
+        }
+      `}</style>
         <button
           onClick={handleCtaClick}
           className="inter-font font-medium border-2 border-red-500 text-white hover:bg-red-500 hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-md"
