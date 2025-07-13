@@ -13,57 +13,83 @@ interface ScheduleItem {
 const schedule: ScheduleItem[] = [
   {
     time: "15:00",
-    title: "Registration Opens",
-    description:
-      "Check in at the registration desk. All attendees must verify their details.",
+    title: "Registrations Open",
+    description: "Check in at the registration desk. All participants and attendees must verify their details.",
     type: "registration",
   },
   {
     time: "15:45",
     title: "Campus Entry Deadline",
-    description:
-      "All attendees must be present on campus by this time. Latecomers will not be allowed inside during talks.",
+    description: "All participants and attendees must be on campus by this time.",
     type: "info",
   },
   {
-    time: "16:00",
-    title: "Opening Ceremony",
-    description: "Welcome address and event introduction.",
+    time: "16:00 - 16:05",
+    title: "Welcome by MC",
+    description: "Opening remarks and welcome to the event.",
     type: "ceremony",
   },
   {
-    time: "16:15",
-    title: "Session 1: Speaker Talks",
-    description: "First set of TEDx talks and performances.",
+    time: "16:05 - 16:10",
+    title: "Introduction of Event & Speakers",
+    description: "Overview of the event and introduction of speakers.",
+    type: "ceremony",
+  },
+  {
+    time: "16:30 - 16:50",
+    title: "Speaker #1",
+    description: "First speaker session.",
     type: "talk",
   },
   {
-    time: "17:15",
-    title: "Break & Networking",
-    description:
-      "Snacks, tea, and coffee served outside the CMPH. Phones may be used during this time.",
+    time: "16:50 - 17:10",
+    title: "Speaker #2",
+    description: "Second speaker session.",
+    type: "talk",
+  },
+  {
+    time: "17:10 - 17:30",
+    title: "Speaker #3",
+    description: "Third speaker session.",
+    type: "talk",
+  },
+  {
+    time: "17:30 - 18:00",
+    title: "High Tea Break",
+    description: "Refreshments and high tea served.",
     type: "break",
   },
   {
-    time: "17:45",
-    title: "Session 2: Speaker Talks",
-    description: "Second set of TEDx talks and performances.",
+    time: "18:00 - 18:20",
+    title: "Speaker #4",
+    description: "Fourth speaker session.",
     type: "talk",
   },
   {
-    time: "18:45",
-    title: "Closing Ceremony",
-    description: "Thank you note, acknowledgements, and event wrap-up.",
-    type: "ceremony",
+    time: "18:20 - 18:40",
+    title: "Speaker #5",
+    description: "Fifth speaker session.",
+    type: "talk",
   },
   {
-    time: "19:00",
-    title: "Event Ends",
-    description:
-      "Attendees depart. Please ensure you have all your belongings.",
-    type: "info",
+    time: "18:40 - 18:55",
+    title: "Speaker #6",
+    description: "Sixth speaker session.",
+    type: "talk",
   },
-];
+  {
+    time: "18:55 - 19:00",
+    title: "Vote of Thanks by Ranjit Sir",
+    description: "Closing remarks and acknowledgements.",
+    type: "closing",
+  },
+  {
+    time: "19:00-19:05",
+    title: "Comms Speech",
+    description: "Communications speech.",
+    type: "closing",
+  },
+]
 
 const typeColors: Record<string, string> = {
   registration: "bg-blue-900/70 text-blue-200",
@@ -71,6 +97,7 @@ const typeColors: Record<string, string> = {
   ceremony: "bg-purple-900/70 text-purple-200",
   talk: "bg-red-900/70 text-red-200",
   break: "bg-yellow-700/70 text-yellow-100",
+  closing: "bg-green-900/70 text-green-200",
 };
 
 import AnimatedSection from "./AnimatedSection";
@@ -112,6 +139,7 @@ const ScheduleSection: React.FC = () => {
           transition: filter 0.3s, color 0.3s;
         }
         .faq-title-interactive:hover {
+  // Missing comma added here
           color: #fff;
           filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
         }
