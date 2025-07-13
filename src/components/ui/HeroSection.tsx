@@ -108,7 +108,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         height={800}
         style={{
           width: "auto",
-          height: typeof window !== 'undefined' && window.innerWidth < 768 ? jumperHeight * 1.35 : jumperHeight,
+          height:
+            typeof window !== "undefined" && window.innerWidth < 768
+              ? jumperHeight * 1.35
+              : jumperHeight,
           maxHeight: JUMPER_MAX_HEIGHT,
           minHeight: JUMPER_MIN_HEIGHT,
           transform: "translateX(-50%)",
@@ -217,7 +220,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 Presented by
               </span>
               <span className="ibm-font flex flex-row items-center gap-0.5">
-                <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight group-hover:scale-110 transition-transform duration-300">
+                <span className="text-red-500 font-extrabold text-xl md:text-2xl tracking-tight">
                   TED
                 </span>
                 <span
@@ -232,7 +235,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 >
                   x
                 </span>
-                <span className="text-white font-light text-lg md:text-xl group-hover:text-red-400 transition-colors duration-300">
+                <span className="text-white font-light text-lg md:text-xl">
                   Youth@CHIREC
                 </span>
               </span>
@@ -247,18 +250,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
         </div>
-      <style jsx global>{`
-        .hero-glass-card {
-          box-shadow: 0 4px 32px 0 #ef4444cc, 0 1.5px 8px 0 #fff2;
-        }
-        .animate-card-glow {
-          animation: cardGlow 2.5s ease-in-out infinite alternate;
-        }
-        @keyframes cardGlow {
-          0% { opacity: 0.5; }
-          100% { opacity: 1; }
-        }
-      `}</style>
+        <style jsx global>{`
+          .hero-glass-card {
+            box-shadow: 0 4px 32px 0 #ef4444cc, 0 1.5px 8px 0 #fff2;
+          }
+          .animate-card-glow {
+            animation: cardGlow 2.5s ease-in-out infinite alternate;
+          }
+          @keyframes cardGlow {
+            0% {
+              opacity: 0.5;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        `}</style>
         <button
           onClick={handleCtaClick}
           className="inter-font font-medium border-2 border-red-500 text-white hover:bg-red-500 hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-md"
