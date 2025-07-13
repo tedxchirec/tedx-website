@@ -98,7 +98,7 @@ const ScheduleSection: React.FC = () => {
         ></div>
       </div>
 
-      <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold text-red-500 mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 faq-title-interactive text-center">
+      <h2 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold text-red-500 mb-9 leading-none relative z-10 faq-title-interactive text-center">
         <span className="relative inline-block">
           Event Schedule
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">

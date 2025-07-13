@@ -44,21 +44,18 @@ export default function MeetTheTeamPage() {
         <div className="hidden md:block absolute bottom-10 md:bottom-20 right-1/4 w-6 md:w-10 h-6 md:h-10 bg-white/3 rounded-full animate-float [animation-delay:4s]"></div>
       </div>
       <h1 className="geist-font text-[2.8rem] md:text-[5rem] font-extrabold mb-18 leading-none relative z-10 faq-title-interactive text-center pt-32 md:pt-40 mb-12 md:mb-20">
-        <span className="heading-entity">
+        <span className="heading-entity meet-team-heading-responsive">
           <span className="geist-font heading-main">Meet the </span>
-          <span className="ibm-font heading-tedx">
+          <span className="ibm-font heading-tedx" style={{ display: 'inline-flex', alignItems: 'center' }}>
             TED
             <span
-              className="relative mx-0.5 heading-x"
-              style={{
-                fontSize: "0.7em",
-                top: "-0.45em",
-              }}
+              className="relative heading-x"
+              style={{ fontSize: "0.7em", top: "-0.45em", marginLeft: '-0.08em', marginRight: '-0.08em' }}
             >
               x
             </span>
           </span>
-          <span className="ibm-font heading-youth" style={{marginLeft: "-0.12em"}}>Youth@CHIREC</span>
+          <span className="ibm-font heading-youth" style={{ marginLeft: '-0.12em' }}>Youth@CHIREC</span>
           <span className="geist-font heading-main"> Team</span>
         </span>
         <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
@@ -88,6 +85,25 @@ export default function MeetTheTeamPage() {
           display: inline-flex;
           gap: 0.2em;
           align-items: center;
+        }
+        .meet-team-heading-responsive {
+          flex-wrap: wrap;
+          text-align: center;
+          justify-content: center;
+          white-space: normal;
+          word-break: break-word;
+          max-width: 100vw;
+        }
+        @media (max-width: 600px) {
+          .meet-team-heading-responsive {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 2.1rem !important;
+            line-height: 1.1;
+            gap: 0.08em;
+          }
         }
         .heading-main {
           color: #ef4444;

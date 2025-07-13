@@ -138,18 +138,18 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 py-10 md:py-0 flex flex-col justify-center">
         {/* Header */}
         <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 faq-title-interactive text-center">
-          <span className="heading-entity">
+          <span className="heading-entity about-heading-responsive">
             <span className="geist-font heading-main">About </span>
-            <span className="ibm-font heading-tedx">
+            <span className="ibm-font heading-tedx" style={{ display: 'inline-flex', alignItems: 'center' }}>
               TED
               <span
-                className="relative mx-0.5 heading-x"
-                style={{ fontSize: "0.7em", top: "-0.45em" }}
+                className="relative heading-x"
+                style={{ fontSize: "0.7em", top: "-0.45em", marginLeft: '-0.08em', marginRight: '-0.08em' }}
               >
                 x
               </span>
             </span>
-            <span className="ibm-font heading-youth" style={{marginLeft: "-0.12em"}}>Youth@CHIREC</span>
+            <span className="ibm-font heading-youth" style={{ marginLeft: '-0.12em' }}>Youth@CHIREC</span>
           </span>
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
             <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
@@ -169,6 +169,25 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
             display: inline-flex;
             gap: 0.2em;
             align-items: center;
+          }
+          .about-heading-responsive {
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            white-space: normal;
+            word-break: break-word;
+            max-width: 100vw;
+          }
+          @media (max-width: 600px) {
+            .about-heading-responsive {
+              display: flex !important;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              font-size: 1.7rem !important;
+              line-height: 1.1;
+              gap: 0.08em;
+            }
           }
           .heading-main {
             color: #ef4444;
