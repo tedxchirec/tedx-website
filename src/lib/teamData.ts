@@ -17,19 +17,19 @@ In her capacity as Co-Organiser, Aanya looks forward to bringing her experience 
     image: "1.png",
   },
   {
-    Name: "Neha Thakkal",
-    Department: "Co-Organizers",
-    Description: `Growing up watching TEDx Talks with her family, Neha was always inspired by the vision behind the platform. Her dream of becoming a TEDx speaker came true in January 2025, and since then, she has been determined to bring that same sense of warmth, community, and storytelling to CHIREC. Passionate about organizing events and collaborating with teams, Neha hopes to create lasting memories for everyone involved. She’s excited to give her all to this event and make it a resounding success!`,
-    DeptOrder: 1,
-    image: "2.png",
-  },
-  {
     Name: "Nisha Sriram",
     Department: "Co-Organizers",
     Description: `Nisha Sriram is an IBDP Year 2 student studying Economics, English, Math AA, and Computer Science at higher level. She’s passionate about storytelling in all its forms, whether it’s through music, journalism, or thoughtful conversations.
 As Editor-in-Chief of her school newspaper, she’s had a front-row seat to the originality and insight students bring to the table. At TEDx this year, she’s excited to keep amplifying those voices and creating space for ideas that deserve to be heard.`,
     DeptOrder: 1,
     image: "3.png",
+  },
+   {
+    Name: "Neha Thakkal",
+    Department: "Co-Organizers",
+    Description: `Growing up watching TEDx Talks with her family, Neha was always inspired by the vision behind the platform. Her dream of becoming a TEDx speaker came true in January 2025, and since then, she has been determined to bring that same sense of warmth, community, and storytelling to CHIREC. Passionate about organizing events and collaborating with teams, Neha hopes to create lasting memories for everyone involved. She’s excited to give her all to this event and make it a resounding success!`,
+    DeptOrder: 1,
+    image: "2.png",
   },
   {
     Name: "Aanya Bahri",
