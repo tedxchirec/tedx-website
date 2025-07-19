@@ -91,14 +91,21 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
               </Link>
             ))}
           </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="inter-font font-medium group relative overflow-hidden bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
+            {/* CTA Button */}
+            <div className="hidden md:block">
+            <a
+              href="https://forms.office.com/e/Nvkd0kNPA7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inter-font font-medium group relative overflow-hidden bg-red-500 text-white px-6 py-3 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 hover:scale-105 hover:bg-red-600 shadow hover:shadow-lg"
+              style={{
+              boxShadow: "0 2px 8px 0 rgba(255, 0, 0, 0.10)",
+              transform: "scale(1)",
+              }}
+            >
               <span className="relative z-10">Book Now</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-          </div>
+            </a>
+            </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -146,9 +153,14 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-xl transition-all duration-300 mt-4">
+            <a
+              href="https://forms.office.com/e/Nvkd0kNPA7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-xl transition-all duration-300 mt-4 flex items-center justify-center"
+            >
               Register
-            </button>
+            </a>
           </div>
         </div>
       </div>

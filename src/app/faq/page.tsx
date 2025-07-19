@@ -5,6 +5,10 @@ import AnimatedSection from "../../components/ui/AnimatedSection";
 
 const faqs = [
   {
+    q: "How do I register for TEDxYouth@CHIREC@2025?",
+    a: "To register, click the 'Book Now' button on our website. This will open a registration form. Fill it out with your details. The first 100 respondents will receive a payment link via email. Once the payment is completed, your ticket will be confirmed and sent to you.",
+  },
+  {
     q: "How can we register?",
     a: "Registrations will open soon—stay tuned for the official launch and complete instructions!",
   },

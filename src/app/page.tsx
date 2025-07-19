@@ -8,8 +8,7 @@ import SpeakersSection from "@/components/speakers/SpeakersSection";
 
 export default function HomePage() {
   const handleBookNowClick = () => {
-    // Handle booking logic here
-    console.log("Navigating to booking...");
+    window.open("https://forms.office.com/e/Nvkd0kNPA7", "_blank", "noopener,noreferrer");
   };
 
   return (
