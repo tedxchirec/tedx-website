@@ -77,16 +77,17 @@ const schedule: ScheduleItem[] = [
     description: "Sixth speaker session.",
     type: "talk",
   },
+  
   {
-    time: "18:55 - 19:00",
-    title: "Vote of Thanks by Ranjit Sir",
-    description: "Closing remarks and acknowledgements.",
+    time: "18:55-19:00",
+    title: "Comms Speech",
+    description: "Communications speech.",
     type: "closing",
   },
   {
-    time: "19:00-19:05",
-    title: "Comms Speech",
-    description: "Communications speech.",
+    time: "19:00 - 19:05",
+    title: "Vote of Thanks",
+    description: "Closing remarks and acknowledgements.",
     type: "closing",
   },
 ]
