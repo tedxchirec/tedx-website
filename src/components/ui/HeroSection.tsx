@@ -13,16 +13,10 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   ctaText = "Reserve Your Spot",
-  onCtaClick,
   className = "",
 }) => {
   const handleCtaClick = () => {
-    if (onCtaClick) {
-      onCtaClick();
-    } else {
-      // Default behavior - scroll to booking section or external link
-      console.log("Book Now clicked");
-    }
+    window.open("https://forms.office.com/e/Nvkd0kNPA7", "_blank", "noopener,noreferrer");
   };
 
   // --- FINAL HERO LAYOUT (RESPONSIVE JUMPER PLACEMENT) ---
