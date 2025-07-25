@@ -52,6 +52,14 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
+                href="/about"
+                className="hover:text-white transition"
+              >
+                About TEDx
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/meet-the-team"
                 className="hover:text-white transition"
               >
