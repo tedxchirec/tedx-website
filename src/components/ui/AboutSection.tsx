@@ -140,7 +140,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         {/* Header */}
         <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold mb-6 md:mb-8 pt-8 md:pt-10 leading-none relative z-10 faq-title-interactive text-center">
           <span className="heading-entity about-heading-responsive">
-            <span className="geist-font heading-main">About </span>
+            <span className="geist-font heading-main">What is </span>
             <span
               className="ibm-font heading-tedx"
               style={{ display: "inline-flex", alignItems: "center" }}
@@ -152,18 +152,13 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
                   fontSize: "0.7em",
                   top: "-0.45em",
                   marginLeft: "-0.08em",
-                  marginRight: "-0.08em",
+                  marginRight: "-0.5em",
                 }}
               >
                 x
               </span>
             </span>
-            <span
-              className="ibm-font heading-youth"
-              style={{ marginLeft: "-0.12em" }}
-            >
-              Youth@CHIREC
-            </span>
+            <span className="geist-font heading-main">?</span>
           </span>
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
             <span className="block w-full h-full rounded-full bg-gradient-to-br from-red-500/20 via-red-400/3 to-white/0 blur-xl animate-title-pulse" />
@@ -250,13 +245,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({ className = "" }) => {
         `}</style>
 
         {/* Description */}
-        <p className="inter-font text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
-          TEDxYouth@CHIREC is a crucible of innovation, where the world&apos;s
-          most audacious thinkers and creators converge. We don&apos;t just
-          share ideas; we ignite movements. This year, we venture beyond the
-          known, exploring the frontiers of science, art, and human
-          consciousness.
-        </p>
+        <div className="inter-font text-base md:text-xl text-gray-300 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto text-center">
+          In the spirit of discovering and spreading ideas, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDx[name], where x = independently organized TED event. At our TEDx[name] event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.
+        </div>
 
         {/* Stats in a row for the new format */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12 pb-0">

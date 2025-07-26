@@ -31,23 +31,18 @@ function SpeakersSectionGlobalStyles() {
   );
 }
 
-// const guestSpeakers = [
-//   {
-//     description:
-//       "Dr. Jane Smith is a world-renowned expert in innovation and technology, with over 20 years of experience leading global teams.",
-//     image: "/speakers/guest1.png",
-//   },
-//   {
-//     description:
-//       "Prof. John Doe is a celebrated author and thought leader, inspiring audiences worldwide with his groundbreaking research.",
-//     image: "/speakers/guest2.png",
-//   },
-//   {
-//     description:
-//       "Ms. Emily Lee is an industry leader, known for her transformative work in social entrepreneurship and impact.",
-//     image: "/speakers/guest3.png",
-//   },
-// ];
+const guestSpeakers = [
+  {
+    description:
+       "Shantha Sinha, former Chair of the National Commission for Protection of Child Rights (2007–2013) and Founder Secretary Trustee of MV Foundation (1981–2007), removed over one million children from work and mainstreamed them into schools across India, pioneering bridge courses for older children. She served as Professor of Political Science at the University of Hyderabad and received the Padma Shri (1998), Albert Shanker International Educational Award (1998), and Ramon Magsaysay Award (2003). Her work across states like Andhra Pradesh, Bihar, and Telangana revealed that all out-of-school children are child labourers and that poverty is not the root cause, challenging many entrenched myths.",
+    image: "/speakers/guest1.png",
+  },
+  {
+    description:
+      "Sai, born with over 60% physical disability, overcame repeated rejections to excel as a gold medalist from CBIT, earn an MS in Computer Science from the University of Wisconsin, and an MBA from ISB. Now a Deloitte consultant, he became the first Asian with a disability to set foot on Antarctica and the first physically challenged Indian to skydive from 14,000 ft, also featuring on Satyamev Jayate. A recipient of the Helen Keller Role Model Award and ISB Torch Bearer Award, Sai co-founded Sahasra, impacting 15,000+ students, and has worked to promote employment for the physically challenged in India.",
+    image: "/speakers/guest2.png",
+  },
+];
 
 const studentSpeakers = [
   {
@@ -77,7 +72,7 @@ const SpeakersSection: React.FC = () => (
     <SpeakersSectionGlobalStyles />
     <AnimatedSection className="relative z-10 pt-5 pb-6 px-6 md:px-12 bg-black/90">
       {/* Unique background for guest speakers */}
-      {/* <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
+      <div className="absolute left-0 top-0 w-40 h-40 bg-gradient-to-br from-red-500/30 to-transparent rounded-full blur-2xl -z-10" />
       <div className="absolute right-0 top-1/2 w-32 h-32 bg-red-400/20 rounded-full blur-2xl -z-10" />
       <div className="w-full flex flex-col items-center pb-8 md:pb-12">
         <h2 className="geist-font text-[2.2rem] md:text-[3.5rem] font-extrabold text-red-500 mb-8 md:mb-12 leading-none relative z-10 faq-title-interactive text-center">
@@ -104,7 +99,7 @@ const SpeakersSection: React.FC = () => (
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
       {/* Unique background for student speakers */}
       <div className="absolute right-0 bottom-0 w-40 h-40 bg-gradient-to-tl from-red-500/20 to-transparent rounded-full blur-2xl -z-10" />
       <div className="absolute left-0 bottom-1/2 w-32 h-32 bg-red-400/10 rounded-full blur-2xl -z-10" />
