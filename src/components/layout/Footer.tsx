@@ -198,7 +198,21 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="geist-font mt-10 border-t border-white/10 pt-4 text-center text-xs text-gray-500">
-        &copy; 2025 TEDxYouth@CHIREC. All rights reserved.
+        <div className="mb-2">
+          &copy; 2025 TEDxYouth@CHIREC. All rights reserved.
+        </div>
+        <div className="flex items-center justify-center gap-1 text-gray-400">
+          <span>Made with</span>
+          <span className="text-red-500 animate-pulse">❤️</span>
+          <span>by</span>
+          <span className="text-white font-medium hover:text-red-400 transition-colors cursor-default">
+            Sanjaay Rajkumar
+          </span>
+          <span>&</span>
+          <span className="text-white font-medium hover:text-red-400 transition-colors cursor-default">
+            Ved Shivane
+          </span>
+        </div>
       </div>
     </footer>
   );

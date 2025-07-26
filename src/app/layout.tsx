@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: "TEDxYouth@CHIREC",
   description:
     "TedxYouth@CHIREC is a conference for student speakers to tell their story.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
