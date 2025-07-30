@@ -2,12 +2,14 @@
 
 import React from "react";
 
+
 interface ScheduleItem {
   time: string;
   title: string;
   subtitle?: string;
   description: string;
-  type: "talk" | "info" | "break" | "ceremony" | "registration" | string;
+  type: "registration" | "info" | "opening" | "speaker" | "break" | "closing" | "anthem";
+  speaker?: string;
 }
 
 const schedule: ScheduleItem[] = [
@@ -24,34 +26,31 @@ const schedule: ScheduleItem[] = [
     type: "info",
   },
   {
-    time: "16:00 - 16:05",
-    title: "Welcome by MC",
-    description: "Opening remarks and welcome to the event.",
-    type: "ceremony",
-  },
-  {
-    time: "16:05 - 16:10",
-    title: "Introduction of Event & Speakers",
-    description: "Overview of the event and introduction of speakers.",
-    type: "ceremony",
+    time: "16:00 - 16:25",
+    title: "Welcome and Introduction",
+    description: "Opening remarks, event introduction, and overview.",
+    type: "opening",
   },
   {
     time: "16:30 - 16:50",
     title: "Speaker #1",
     description: "First speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Ms Shanta Sinha",
   },
   {
     time: "16:50 - 17:10",
     title: "Speaker #2",
     description: "Second speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Thrinay Reddy",
   },
   {
     time: "17:10 - 17:30",
     title: "Speaker #3",
     description: "Third speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Mr Sai Prasad Viswanathan",
   },
   {
     time: "17:30 - 18:00",
@@ -63,42 +62,39 @@ const schedule: ScheduleItem[] = [
     time: "18:00 - 18:20",
     title: "Speaker #4",
     description: "Fourth speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Sai Akhilesh Palakodeti",
   },
   {
     time: "18:20 - 18:40",
     title: "Speaker #5",
     description: "Fifth speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Rikith Jamalpuri",
   },
   {
     time: "18:40 - 18:55",
     title: "Speaker #6",
     description: "Sixth speaker session.",
-    type: "talk",
-  },
-  
-  {
-    time: "18:55-19:00",
-    title: "Comms Speech",
-    description: "Communications speech.",
-    type: "closing",
+    type: "speaker",
+    speaker: "Manya Agarwal",
   },
   {
-    time: "19:00 - 19:05",
-    title: "Vote of Thanks",
-    description: "Closing remarks and acknowledgements.",
-    type: "closing",
+    time: "18:55 - 19:00",
+    title: "Closing",
+    description: "National Anthem.",
+    type: "anthem",
   },
-]
+];
 
 const typeColors: Record<string, string> = {
   registration: "bg-blue-900/70 text-blue-200",
   info: "bg-gray-800/70 text-gray-200",
-  ceremony: "bg-purple-900/70 text-purple-200",
-  talk: "bg-red-900/70 text-red-200",
+  opening: "bg-purple-900/70 text-purple-200",
+  speaker: "bg-red-900/70 text-red-200",
   break: "bg-yellow-700/70 text-yellow-100",
   closing: "bg-green-900/70 text-green-200",
+  anthem: "bg-indigo-900/70 text-indigo-200",
 };
 
 import AnimatedSection from "./AnimatedSection";
