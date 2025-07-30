@@ -7,7 +7,8 @@ interface ScheduleItem {
   title: string;
   subtitle?: string;
   description: string;
-  type: "talk" | "info" | "break" | "ceremony" | "registration" | string;
+  type: "registration" | "info" | "opening" | "speaker" | "break" | "closing" | "anthem";
+  speaker?: string;
 }
 
 const schedule: ScheduleItem[] = [
@@ -24,34 +25,31 @@ const schedule: ScheduleItem[] = [
     type: "info",
   },
   {
-    time: "16:00 - 16:05",
-    title: "Welcome by MC",
-    description: "Opening remarks and welcome to the event.",
-    type: "ceremony",
-  },
-  {
-    time: "16:05 - 16:10",
-    title: "Introduction of Event & Speakers",
-    description: "Overview of the event and introduction of speakers.",
-    type: "ceremony",
+    time: "16:00 - 16:25",
+    title: "Welcome and Introduction",
+    description: "Opening remarks, event introduction, and overview.",
+    type: "opening",
   },
   {
     time: "16:30 - 16:50",
     title: "Speaker #1",
     description: "First speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Ms Shanta Sinha",
   },
   {
     time: "16:50 - 17:10",
     title: "Speaker #2",
     description: "Second speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Thrinay Reddy",
   },
   {
     time: "17:10 - 17:30",
     title: "Speaker #3",
     description: "Third speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Mr Sai Prasad Viswanathan",
   },
   {
     time: "17:30 - 18:00",
@@ -63,42 +61,39 @@ const schedule: ScheduleItem[] = [
     time: "18:00 - 18:20",
     title: "Speaker #4",
     description: "Fourth speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Sai Akhilesh Palakodeti",
   },
   {
     time: "18:20 - 18:40",
     title: "Speaker #5",
     description: "Fifth speaker session.",
-    type: "talk",
+    type: "speaker",
+    speaker: "Rikith Jamalpuri",
   },
   {
     time: "18:40 - 18:55",
     title: "Speaker #6",
     description: "Sixth speaker session.",
-    type: "talk",
-  },
-  
-  {
-    time: "18:55-19:00",
-    title: "Comms Speech",
-    description: "Communications speech.",
-    type: "closing",
+    type: "speaker",
+    speaker: "Manya Agarwal",
   },
   {
-    time: "19:00 - 19:05",
-    title: "Vote of Thanks",
-    description: "Closing remarks and acknowledgements.",
-    type: "closing",
+    time: "18:55 - 19:00",
+    title: "Closing",
+    description: "National Anthem.",
+    type: "anthem",
   },
-]
+];
 
 const typeColors: Record<string, string> = {
   registration: "bg-blue-900/70 text-blue-200",
   info: "bg-gray-800/70 text-gray-200",
-  ceremony: "bg-purple-900/70 text-purple-200",
-  talk: "bg-red-900/70 text-red-200",
+  opening: "bg-purple-900/70 text-purple-200",
+  speaker: "bg-red-900/70 text-red-200",
   break: "bg-yellow-700/70 text-yellow-100",
   closing: "bg-green-900/70 text-green-200",
+  anthem: "bg-indigo-900/70 text-indigo-200",
 };
 
 import AnimatedSection from "./AnimatedSection";
@@ -140,7 +135,6 @@ const ScheduleSection: React.FC = () => {
           transition: filter 0.3s, color 0.3s;
         }
         .faq-title-interactive:hover {
-  // Missing comma added here
           color: #fff;
           filter: drop-shadow(0 0 24px #ef4444cc) brightness(1.2);
         }
@@ -178,7 +172,7 @@ const ScheduleSection: React.FC = () => {
                   }`}
                 >
                   {isLeft && (
-                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
+                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] group/card">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="inter-font text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
                           {item.time}
@@ -195,6 +189,11 @@ const ScheduleSection: React.FC = () => {
                       <div className="ibm-font text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                         {item.title}
                       </div>
+                      {item.speaker && (
+                        <div className="ibm-font text-sm text-gray-400 font-medium mb-1">
+                          {item.speaker}
+                        </div>
+                      )}
                       {item.subtitle && (
                         <div className="ibm-font text-sm text-gray-400 font-medium mb-1">
                           {item.subtitle}
@@ -224,7 +223,7 @@ const ScheduleSection: React.FC = () => {
                   }`}
                 >
                   {!isLeft && (
-                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
+                    <div className="w-full max-w-md bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 md:py-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.025] group/card">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="inter-font text-lg md:text-xl font-bold text-red-500 mr-2 min-w-[60px]">
                           {item.time}
@@ -241,6 +240,11 @@ const ScheduleSection: React.FC = () => {
                       <div className="ibm-font text-lg md:text-2xl font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                         {item.title}
                       </div>
+                      {item.speaker && (
+                        <div className="ibm-font text-sm text-gray-400 font-medium mb-1">
+                          {item.speaker}
+                        </div>
+                      )}
                       {item.subtitle && (
                         <div className="ibm-font text-sm text-gray-400 font-medium mb-1">
                           {item.subtitle}
@@ -261,7 +265,7 @@ const ScheduleSection: React.FC = () => {
           {schedule.map((item) => (
             <div key={item.time + item.title} className="flex items-center">
               {/* Card only, no dot or line */}
-              <div className="w-full max-w-md mx-auto bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 flex flex-col gap-2 transition-all duration-300 active:scale-[0.98] hover:scale-[1.015] hover:border-red-500/60 hover:shadow-xl hover:bg-[#1a1f2b] group/card">
+              <div className="w-full max-w-md mx-auto bg-[#151922] border border-white/5 rounded-2xl shadow-lg px-6 py-5 flex flex-col gap-2 transition-all duration-300 active:scale-[0.98] group/card">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-lg font-bold text-red-500 mr-2 min-w-[60px]">
                     {item.time}
@@ -277,6 +281,11 @@ const ScheduleSection: React.FC = () => {
                 <div className="text-lg font-bold text-white leading-tight group-hover/card:text-red-500 transition-colors duration-300">
                   {item.title}
                 </div>
+                {item.speaker && (
+                  <div className="text-sm text-gray-400 font-medium mb-1">
+                    {item.speaker}
+                  </div>
+                )}
                 {item.subtitle && (
                   <div className="text-sm text-gray-400 font-medium mb-1">
                     {item.subtitle}
